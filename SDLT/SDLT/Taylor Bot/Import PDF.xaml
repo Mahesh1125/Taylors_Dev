@@ -1,0 +1,1183 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Import_PDF" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1149,8145" sap2010:WorkflowViewState.IdRef="Import_PDF_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="30">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Import_PDF" sap:VirtualizedContainerService.HintSize="909,8080" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  SDLT'" sap:VirtualizedContainerService.HintSize="867,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2049cfd1-d399-4574-99cb-494a6ec2e0b6" InformativeScreenshot="afb62759f3ad23ec055d3fe7a942b5d2" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='mainToolBar' /&gt;&lt;ctrl name='SDLT' role='push button' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="867,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="867,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="710f40cb-2c5b-41bd-90cc-a8c3024ad022" InformativeScreenshot="11c94537c72c7ae322d3dee043ed245e" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&#xA;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer' /&gt;&#xA;&lt;wnd ctrlname='paneSplitter' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer1' /&gt;&#xA;&lt;wnd ctrlname='panel3' /&gt;&#xA;&lt;wnd ctrlname='panelControl1' /&gt;&#xA;&lt;wnd ctrlname='bodyToolBar' /&gt;&#xA;&lt;ctrl name='Check SDLT 5' role='push button' /&gt;&#xA;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'sdltframework.exe Stamp'" sap:VirtualizedContainerService.HintSize="867,7634" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="78d6b0c3e9c021206a49ba568d00cd2d" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='sdltframework.exe' ctrlname='IntroductionForm' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="833,7488" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="AdobePDF" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="791,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a2262b27-b95c-4ec8-b056-8ff5cd068b0a" InformativeScreenshot="e4ce5edaef94cf97a78d4088f0e45abe" Selector="&lt;wnd ctrlname='splitContainer' /&gt;&lt;wnd ctrlname='rightPanel' /&gt;&lt;wnd ctrlname='contentContainer' /&gt;&lt;wnd ctrlname='submissionHistoryPanel' /&gt;&lt;wnd ctrlname='submissionHistoryButtonPanel' /&gt;&lt;wnd ctrlname='printSDLT5HistoryButton' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="791,51" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(1,11)]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Column left'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="95534fa3-8fa5-4205-a06f-89553e16b6e6" InformativeScreenshot="6c1cec3150d89c8842e133adb1ace531" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='sdltframework.exe' cls='#32770' title='Print' /&gt;&lt;wnd cls='#32770' title='General' /&gt;&lt;wnd ctrlid='1' title='FolderView' /&gt;&lt;ctrl automationid='NonClientHorizontalScrollBar' idx='1' name='Horizontal' role='scroll bar' /&gt;&lt;ctrl automationid='UpButton' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <ui:UiElementExists DisplayName="Element Exists 'sdltframework.exe  Print'" Exists="[AdobePDF]" sap:VirtualizedContainerService.HintSize="791,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ca7d40ad-5275-4057-a5a3-6bddde7bccf0" InformativeScreenshot="45b2e168b1acc608a0d96f2b513e706d">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[AdobePDF]" sap:VirtualizedContainerService.HintSize="791,7013" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="755,6837" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="PDF_Popup" />
+                    <Variable x:TypeArguments="x:Boolean" Name="SDLT_Submitted" />
+                    <Variable x:TypeArguments="x:Boolean" Name="InternetExp" />
+                    <Variable x:TypeArguments="x:String" Name="FolderNo" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item  Adobe PDF'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ab53350-8165-42dc-8aa5-6dc09a706ecc" InformativeScreenshot="9ca7b312f8c6b2a7e76c4da542791304" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='sdltframework.exe' cls='#32770' title='Print' /&gt;&lt;wnd cls='#32770' title='General' /&gt;&lt;wnd ctrlid='1' title='FolderView' /&gt;&lt;ctrl name='Folder View' role='list' /&gt;&lt;ctrl name='Adobe PDF' role='list item' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="38b32c6c-166a-444d-89fa-406ed1cac8cf" InformativeScreenshot="811f2e5d034cfe57c92b4177d60f5126" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='sdltframework.exe' cls='#32770' title='Print' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Print' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[FolderNo]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString("dd-mm-yyyy-hh-mm-ss")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Edit'" sap:VirtualizedContainerService.HintSize="713,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[&quot;Z:\Landing Zone\BOT Folder\SDLT5\SDLT5&quot;+ FolderNo +&quot;.pdf&quot;]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="20acbf4c-f6e9-4922-9d22-683bb66a4076" InformativeScreenshot="7f827712c5a3225b7e461eece10d30e3" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='sdltframework.exe' cls='#32770' title='Save PDF File As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7277537a-b3fc-4dd9-8dc3-452de8bb187f" InformativeScreenshot="3eb497a415bcc1ae3bf816987e56c617" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='sdltframework.exe' cls='#32770' title='Save PDF File As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,276" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79fd3edf-c2ca-4133-828b-3f0afa244d5b" InformativeScreenshot="9bb8577739119d42077222ca0373ee20" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='sdltframework.exe' cls='#32770' title='Confirm Save As' /&gt;&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:Click.Target>
+                        </ui:Click>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'push button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                          <ui:UiElementExists.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9fe7631-d8a1-43fc-824f-c9b96fdf5058" InformativeScreenshot="65807b22f85d30ae6c0d231ceabc958a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Running applications' /&gt;&lt;wnd cls='MSTaskListWClass' title='Running applications' /&gt;&lt;ctrl name='Running applications' role='tool bar' /&gt;&lt;ctrl name='SDLT*.pdf - Adobe Acrobat Reader DC (32-bit)' role='push button' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:UiElementExists.Target>
+                        </ui:UiElementExists>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Close'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="75816f63-8792-4a7f-8e09-a60fee51b367" InformativeScreenshot="c550d6fed8d8d1b8d94eeb94eecada7f" Selector="&lt;ctrl idx='1' name='Close' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:UiElementExists DisplayName="Element Exists 'acrord32.exe Reading'" Exists="[PDF_Popup]" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="4e7439e9-c90b-4973-8c7c-69dc8da1755d" InformativeScreenshot="400406d2426048c6ba487c02e2a15584">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[PDF_Popup]" sap:VirtualizedContainerService.HintSize="713,263" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa2ca031-9071-4459-9121-d2521b4ee61a" InformativeScreenshot="752d6a47a148874a95a8cb6807797951" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='acrord32.exe' cls='#32770' title='Reading Untagged Document with Assistive Technology' /&gt;&lt;wnd aaname='Cancel' cls='Button' title='&amp;amp;Cancel' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </If.Then>
+                    <If.Else>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Close'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="630d1806-9a77-42f0-8b17-82c287ef4ad2" InformativeScreenshot="3363a4134a10f9ccad0e92bb82339cf1" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC (32-bit)' /&gt;&lt;ctrl name='Close' role='push button' idx='1' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </If.Else>
+                  </If>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0a6c4a48-371c-415a-b4d3-74cb49818c37" InformativeScreenshot="65807b22f85d30ae6c0d231ceabc958a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Running applications' /&gt;&lt;wnd cls='MSTaskListWClass' title='Running applications' /&gt;&lt;ctrl name='Running applications' role='tool bar' /&gt;&lt;ctrl name='SDLT.pdf - Adobe Acrobat Reader DC (32-bit)' role='push button' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:Click.Target>
+                        </ui:Click>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'push button  Documents'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2151eede-5f1e-4c00-baf3-94ad42acd583" InformativeScreenshot="cb8c4d50b4c143523e4e6c28896d7bf0" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='mainToolBar' /&gt;&lt;ctrl name='Documents' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Documents'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2e8a8d33-dce1-43c2-8085-4ae69b70a8f6" InformativeScreenshot="0ac5f0629e29b4648a40c0db80fe7bc8" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='mainToolBar' /&gt;&lt;ctrl name='Documents' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Documents'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d70974df-13fc-45f1-a5ae-5452c2577a8f" InformativeScreenshot="3ac4caffff9acc6ddc02d68c77bc2e78" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='mainToolBar' /&gt;&lt;ctrl name='Documents' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,276" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Import File'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a063d99c-1764-4f7f-ba89-ae72e92c9b5c" InformativeScreenshot="daad2e0cb28aeedaaf5b780db78c2421" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='paneSplitter' /&gt;&lt;wnd ctrlname='toolStripContainer1' /&gt;&lt;wnd ctrlname='panel3' /&gt;&lt;wnd ctrlname='panelControl1' /&gt;&lt;wnd ctrlname='bodyToolBar' /&gt;&lt;ctrl name='Import File' role='menu item' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:Click.Target>
+                        </ui:Click>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Import File'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c0836d-f037-4c2e-82a2-7830f2a20680" InformativeScreenshot="38205c86deb7de25832abe5a0143f9d0" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='paneSplitter' /&gt;&lt;wnd ctrlname='toolStripContainer1' /&gt;&lt;wnd ctrlname='panel3' /&gt;&lt;wnd ctrlname='panelControl1' /&gt;&lt;wnd ctrlname='bodyToolBar' /&gt;&lt;ctrl name='Import File' role='menu item' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:Click.Target>
+                        </ui:Click>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,324" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'menu item  Import File'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="down" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a72f7312-af58-49a1-bb06-8c5375999171" InformativeScreenshot="3fc06e94dab45142c659b7b427c86e66" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='paneSplitter' /&gt;&lt;wnd ctrlname='toolStripContainer1' /&gt;&lt;wnd ctrlname='panel3' /&gt;&lt;wnd ctrlname='panelControl1' /&gt;&lt;wnd ctrlname='bodyToolBar' /&gt;&lt;ctrl name='Import File' role='menu item' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,324" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'menu item  Import File'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0005970-b24d-4dcd-8961-87e965b05fa7" InformativeScreenshot="d9c81e360a709f457ef1214ba27cfa3c" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='paneSplitter' /&gt;&lt;wnd ctrlname='toolStripContainer1' /&gt;&lt;wnd ctrlname='panel3' /&gt;&lt;wnd ctrlname='panelControl1' /&gt;&lt;wnd ctrlname='bodyToolBar' /&gt;&lt;ctrl name='Import File' role='menu item' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="713,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;WAIT&quot;]" />
+                  <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'redbrickpm.exe  Open'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5ecf51e4-0cba-4cc7-8cdb-3bc4608fae86" InformativeScreenshot="f224c19111a0fd9d345a72f4f15cd350">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Edit'" sap:VirtualizedContainerService.HintSize="713,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[&quot;Z:\Landing Zone\BOT Folder\SDLT5\SDLT5&quot;+ FolderNo +&quot;.pdf&quot;]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10547ddc-464d-42ef-807c-cc3d527befd3" InformativeScreenshot="6df31a824da9434f565da4c5710f8b2e" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="036f5ec6-e177-4dce-9d73-41cc4a9cccc1" InformativeScreenshot="f662beb52c68aa11aa2ecd8c31fcb3a5" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'redbrickpm.exe Add'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f7b17479-e241-4780-a97e-07c3e32b05e7" InformativeScreenshot="3a6e42bc891f35c82fb44377f8fe4631">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4a006a3d-bc20-47be-8983-ac95b9a3b2e3" InformativeScreenshot="665d2844e3180ce01988c549313ec5cf" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' cls='#32770' title='Add Folders?' /&gt;&lt;wnd ctrlid='6' title='&amp;amp;Yes' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'redbrickpm.exe Folders'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f0f13469-a5d0-425a-9c76-3783359cf2db" InformativeScreenshot="36d9c82ed55fd30ab181400b7892d5a7">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Add'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="919e884b-c8a2-4bce-9c40-e64888fb8783" InformativeScreenshot="f2450a46f062ce148c19c06e79a2cd4a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerDialog' /&gt;&lt;wnd ctrlname='gProperties' /&gt;&lt;wnd ctrlname='tsButtons' /&gt;&lt;ctrl name='Add' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box  Tag:'" sap:VirtualizedContainerService.HintSize="713,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Post  Completion">
+                    <ui:SelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="50">
+                        <x:String xml:space="preserve"> correspondence</x:String>
+                        <x:String xml:space="preserve"> Financial</x:String>
+                        <x:String xml:space="preserve"> lender requirements</x:String>
+                        <x:String xml:space="preserve"> post completion</x:String>
+                        <x:String xml:space="preserve"> searches</x:String>
+                        <x:String>£30038.39 Inheritance</x:String>
+                        <x:String>1</x:String>
+                        <x:String>12 FLAMBORO</x:String>
+                        <x:String>13a Jubilee</x:String>
+                        <x:String xml:space="preserve">2 </x:String>
+                        <x:String>2 Searches</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>72 CLYDE WAY</x:String>
+                        <x:String>8 Clementsbury</x:String>
+                        <x:String>Aberdeen Standard</x:String>
+                        <x:String>Abo Purchase</x:String>
+                        <x:String>Abo Sale</x:String>
+                        <x:String>Abo Sale - 179</x:String>
+                        <x:String xml:space="preserve">Abo Sale 1 </x:String>
+                        <x:String xml:space="preserve">aborted </x:String>
+                        <x:String>abortive matter</x:String>
+                        <x:String>abortive purchase</x:String>
+                        <x:String>Accord Mortgages</x:String>
+                        <x:String>Activated</x:String>
+                        <x:String>Adverse Possession</x:String>
+                        <x:String>Aegon</x:String>
+                        <x:String>Aegon/Scottish Equitable</x:String>
+                        <x:String>Agents</x:String>
+                        <x:String>AH41</x:String>
+                        <x:String>aJ Bell</x:String>
+                        <x:String>AK Tax Advice - CGT Calculation</x:String>
+                        <x:String>Al BURAQ</x:String>
+                        <x:String>Alfa Networks</x:String>
+                        <x:String>all</x:String>
+                        <x:String>amended contract</x:String>
+                        <x:String>amended documents</x:String>
+                        <x:String>AMENDEDCONTRACT</x:String>
+                        <x:String>amendedmemorandumofsale</x:String>
+                        <x:String>AMENDMENTSTOCONTRACT</x:String>
+                        <x:String>AML order confirmation</x:String>
+                        <x:String>ANZA</x:String>
+                        <x:String xml:space="preserve">AP1 </x:String>
+                        <x:String>Appliances</x:String>
+                        <x:String>Applications and Orders</x:String>
+                        <x:String>Arbon &amp; Miller</x:String>
+                        <x:String>Argh</x:String>
+                        <x:String>Aspen Healthcare</x:String>
+                        <x:String>Aspen House Health Care</x:String>
+                        <x:String>Assignment pack</x:String>
+                      </scg:List>
+                    </ui:SelectItem.Items>
+                    <ui:SelectItem.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d2ca79f0-e65e-4168-979b-9fb117a57103" InformativeScreenshot="39c8df0136a82d694cd0ca9ba96f371b" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='GenericEditDialog' /&gt;&lt;wnd ctrlname='pEditControlParent' /&gt;&lt;wnd ctrlname='StoredObjectTagEditControl' /&gt;&lt;wnd ctrlname='opOptions' /&gt;&lt;wnd ctrlname='spSplitter' /&gt;&lt;wnd ctrlname='fbPages' /&gt;&lt;wnd ctrlname='pGeneral' /&gt;&lt;wnd ctrlname='cboTag' /&gt;&lt;ctrl name='Tag:' role='combo box' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SelectItem.Target>
+                  </ui:SelectItem>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa7f7064-e7ac-4bf3-9f3e-a5882f53f553" InformativeScreenshot="cee78c1142eea3fa5c7b04ac2498bec0" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='GenericEditDialog' /&gt;&lt;wnd ctrlname='pButtonsPanel' /&gt;&lt;wnd ctrlname='bOK' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="13e29ee8-2eb4-4642-9ee4-5323bf0584b4" InformativeScreenshot="93bb9ec76558569c43b403f43092e6a0" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerDialog' /&gt;&lt;wnd ctrlname='pButtonsPanel' /&gt;&lt;wnd ctrlname='bCancel' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="713,183" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                    <TryCatch.Try>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Progress'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd450e1e-67b2-4bac-9bb3-ca2d537c7b45" InformativeScreenshot="ac2c71c31a98f46737d6c4bda0371657" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='mainToolBar' /&gt;&lt;ctrl name='Progress' role='push button' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'redbrickpm.exe S459/430...'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:ClickImage.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:ClickImage.CursorPosition>
+                            <ui:ClickImage.Image>
+                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                            </ui:ClickImage.Image>
+                            <ui:ClickImage.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="360fed44-b61e-4fa2-b27b-3e3f34d5dd52">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:ClickImage.Target>
+                          </ui:ClickImage>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                  <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'redbrickpm.exe S459/462...'" sap:VirtualizedContainerService.HintSize="713,154" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="down" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4879cc2b-66a2-4ea2-b0bc-81f5b07e9d49" InformativeScreenshot="1297ae5dc3e4065641a45d93465e17a6" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&#xA;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer' /&gt;&#xA;&lt;wnd ctrlname='paneSplitter' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer1' /&gt;&#xA;&lt;wnd ctrlname='panel3' /&gt;&#xA;&lt;wnd ctrlname='panel4' /&gt;&#xA;&lt;wnd ctrlname='bodyPanel' /&gt;&#xA;&lt;wnd ctrlname='ProgressControl' /&gt;&#xA;&lt;wnd ctrlname='grid' /&gt;&#xA;&lt;ctrl name='Row *' role='row' /&gt;&#xA;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'redbrickpm.exe S459/462...'" sap:VirtualizedContainerService.HintSize="713,154" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="down" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4879cc2b-66a2-4ea2-b0bc-81f5b07e9d49" InformativeScreenshot="1297ae5dc3e4065641a45d93465e17a6" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&#xA;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer' /&gt;&#xA;&lt;wnd ctrlname='paneSplitter' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer1' /&gt;&#xA;&lt;wnd ctrlname='panel3' /&gt;&#xA;&lt;wnd ctrlname='panel4' /&gt;&#xA;&lt;wnd ctrlname='bodyPanel' /&gt;&#xA;&lt;wnd ctrlname='ProgressControl' /&gt;&#xA;&lt;wnd ctrlname='grid' /&gt;&#xA;&lt;ctrl name='Row *' role='row' /&gt;&#xA;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'redbrickpm.exe S459/462...'" sap:VirtualizedContainerService.HintSize="713,154" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4879cc2b-66a2-4ea2-b0bc-81f5b07e9d49" InformativeScreenshot="1297ae5dc3e4065641a45d93465e17a6" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&#xA;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer' /&gt;&#xA;&lt;wnd ctrlname='paneSplitter' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer1' /&gt;&#xA;&lt;wnd ctrlname='panel3' /&gt;&#xA;&lt;wnd ctrlname='panel4' /&gt;&#xA;&lt;wnd ctrlname='bodyPanel' /&gt;&#xA;&lt;wnd ctrlname='ProgressControl' /&gt;&#xA;&lt;wnd ctrlname='grid' /&gt;&#xA;&lt;ctrl name='Row *' role='row' /&gt;&#xA;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'redbrickpm.exe S459/462...'" sap:VirtualizedContainerService.HintSize="713,154" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4879cc2b-66a2-4ea2-b0bc-81f5b07e9d49" InformativeScreenshot="1297ae5dc3e4065641a45d93465e17a6" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&#xA;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer' /&gt;&#xA;&lt;wnd ctrlname='paneSplitter' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer1' /&gt;&#xA;&lt;wnd ctrlname='panel3' /&gt;&#xA;&lt;wnd ctrlname='panel4' /&gt;&#xA;&lt;wnd ctrlname='bodyPanel' /&gt;&#xA;&lt;wnd ctrlname='ProgressControl' /&gt;&#xA;&lt;wnd ctrlname='grid' /&gt;&#xA;&lt;ctrl name='Row *' role='row' /&gt;&#xA;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'redbrickpm.exe S459/462...'" sap:VirtualizedContainerService.HintSize="713,154" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4879cc2b-66a2-4ea2-b0bc-81f5b07e9d49" InformativeScreenshot="1297ae5dc3e4065641a45d93465e17a6" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&#xA;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer' /&gt;&#xA;&lt;wnd ctrlname='paneSplitter' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer1' /&gt;&#xA;&lt;wnd ctrlname='panel3' /&gt;&#xA;&lt;wnd ctrlname='panel4' /&gt;&#xA;&lt;wnd ctrlname='bodyPanel' /&gt;&#xA;&lt;wnd ctrlname='ProgressControl' /&gt;&#xA;&lt;wnd ctrlname='grid' /&gt;&#xA;&lt;ctrl name='Row *' role='row' /&gt;&#xA;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'redbrickpm.exe S459/462...'" sap:VirtualizedContainerService.HintSize="713,154" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4879cc2b-66a2-4ea2-b0bc-81f5b07e9d49" InformativeScreenshot="1297ae5dc3e4065641a45d93465e17a6" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&#xA;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer' /&gt;&#xA;&lt;wnd ctrlname='paneSplitter' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer1' /&gt;&#xA;&lt;wnd ctrlname='panel3' /&gt;&#xA;&lt;wnd ctrlname='panel4' /&gt;&#xA;&lt;wnd ctrlname='bodyPanel' /&gt;&#xA;&lt;wnd ctrlname='ProgressControl' /&gt;&#xA;&lt;wnd ctrlname='grid' /&gt;&#xA;&lt;ctrl name='Row *' role='row' /&gt;&#xA;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="713,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;wait&quot;]" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:UiElementExists DisplayName="Element Exists 'cell  Task row 82'" Exists="[SDLT_Submitted]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+                          <ui:UiElementExists.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8d23f2f-3b04-4e26-8247-e50455b6fcc0" InformativeScreenshot="f20f2c2b3b50a1d94ae624fb8466ec4a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&#xA;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer' /&gt;&#xA;&lt;wnd ctrlname='paneSplitter' /&gt;&#xA;&lt;wnd ctrlname='toolStripContainer1' /&gt;&#xA;&lt;wnd ctrlname='panel3' /&gt;&#xA;&lt;wnd ctrlname='panel4' /&gt;&#xA;&lt;wnd ctrlname='bodyPanel' /&gt;&#xA;&lt;wnd ctrlname='ProgressControl' /&gt;&#xA;&lt;wnd ctrlname='grid' /&gt;&#xA;&lt;ctrl name='Task row *' role='cell' text='SDLT submitted to HMRC' /&gt;&#xA;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:UiElementExists.Target>
+                        </ui:UiElementExists>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="526,411" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[SDLT_Submitted]" sap:VirtualizedContainerService.HintSize="670,319" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="556,663" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe Sign'" sap:VirtualizedContainerService.HintSize="514,571" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="582897cfb169f1fe7395089a3b7cf501" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&#xA;&lt;html title='Sign in using Government Gateway - GOV.UK' /&gt;&#xA;">
+                                      <ui:BrowserScope.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="480,425" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                              <TryCatch.Try>
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Close'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                  <ui:Click.CursorPosition>
+                                                    <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition.OffsetX>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetX>
+                                                      <ui:CursorPosition.OffsetY>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetY>
+                                                    </ui:CursorPosition>
+                                                  </ui:Click.CursorPosition>
+                                                  <ui:Click.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a20e179d-e78c-4352-8ee4-e9b17669c34d" InformativeScreenshot="c955f5a9c395bc570f1973e166f86779" Selector="&lt;wnd ctrlid='54315' title='&amp;amp;Ask me later' /&gt;&#xA;&lt;ctrl name='Ask me later' role='push button' text='Ask me later' /&gt;&#xA;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:Click.Target>
+                                                </ui:Click>
+                                              </TryCatch.Try>
+                                              <TryCatch.Catches>
+                                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ActivityAction x:TypeArguments="s:Exception">
+                                                    <ActivityAction.Argument>
+                                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                    </ActivityAction.Argument>
+                                                    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'iexplore.exe Sign'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="582897cfb169f1fe7395089a3b7cf501" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - * - Remote Desktop Connection' /&gt;&lt;wnd app='iexplore.exe' cls='IEFrame' title='Sign in using Government Gateway - GOV.UK - Internet Explorer' /&gt;&lt;wnd cls='Client Caption' /&gt;" WaitForReady="INTERACTIVE" />
+                                                  </ActivityAction>
+                                                </Catch>
+                                              </TryCatch.Catches>
+                                            </TryCatch>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:BrowserScope.Body>
+                                    </ui:BrowserScope>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:CommentOut>
+                            </Sequence>
+                          </If.Then>
+                        </If>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                </Sequence>
+              </If.Then>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+  </Sequence>
+</Activity>

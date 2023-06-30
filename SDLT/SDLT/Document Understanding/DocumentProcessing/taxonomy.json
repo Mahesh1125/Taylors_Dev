@@ -1,0 +1,1584 @@
+﻿{
+  "DataContractVersion": "1.1",
+  "DocumentTypes": [
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstanding.TR1",
+      "Group": "Taylor Bot",
+      "Category": "document understanding Transfer",
+      "Name": "TR1",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstanding.TR1.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TR1.Titlenumber",
+          "FieldName": "Title Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TR1.TitleNumber2",
+          "FieldName": "Title Number 2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TR1.Date",
+          "FieldName": "Date",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TR1.Propertyaddress",
+          "FieldName": "Property address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TR1.Propertyaddress2",
+          "FieldName": "Property address  2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TR1.Transferor",
+          "FieldName": "Transferor",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstanding.TP1",
+      "Group": "Taylor Bot",
+      "Category": "document understanding Transfer",
+      "Name": "TP1",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstanding.TP1.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TP1.TitleNumber",
+          "FieldName": "Title Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TP1.TitleNumber2",
+          "FieldName": "Title Number 2",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TP1.Date",
+          "FieldName": "Date",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TP1.Property",
+          "FieldName": "Property address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TP1.Propertyaddress2",
+          "FieldName": "Property address  2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstanding.TP1.Transferor",
+          "FieldName": "Transferor",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstandingcertifiedid.Passport",
+      "Group": "Taylor Bot",
+      "Category": "document understanding certified id",
+      "Name": "Passport",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstandingcertifiedid.Passport.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.Passport.FirstName",
+          "FieldName": "FirstName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.Passport.MiddleName",
+          "FieldName": "MiddleName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.Passport.LastName",
+          "FieldName": "LastName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.Passport.DateOfBirth",
+          "FieldName": "DOB",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.Passport.PassportNo",
+          "FieldName": "Passport No",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.Passport.Country",
+          "FieldName": "Country",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstandingcertifiedid.TransactionID",
+      "Group": "Taylor Bot",
+      "Category": "document understanding certified id",
+      "Name": "Transaction ID",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstandingcertifiedid.TransactionID.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.TransactionID.FirstName",
+          "FieldName": "FirstName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.TransactionID.MiddleName",
+          "FieldName": "MiddleName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.TransactionID.LastName",
+          "FieldName": "LastName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.TransactionID.DateOfBirth",
+          "FieldName": "DOB",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.TransactionID.passportNoDrivingLicenseNo",
+          "FieldName": "DL/passport No",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.TransactionID.Country",
+          "FieldName": "Country",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstandingcertifiedid.certifiedid",
+      "Group": "Taylor Bot",
+      "Category": "document understanding certified id",
+      "Name": "Driving License",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstandingcertifiedid.certifiedid.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.certifiedid.FirstName",
+          "FieldName": "FirstName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.certifiedid.MiddleName",
+          "FieldName": "MiddleName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.certifiedid.LastName",
+          "FieldName": "LastName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.certifiedid.DOB",
+          "FieldName": "DOB",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.certifiedid.DLpassportNo",
+          "FieldName": "DL No",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.certifiedid.Country",
+          "FieldName": "Country",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstandingContract.Contract1",
+      "Group": "Taylor Bot",
+      "Category": "document understanding Contract",
+      "Name": "Contract",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstandingContract.Contract1.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Exchangedate",
+          "FieldName": "Exchange Date",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Seller",
+          "FieldName": "Seller",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Selleraddress",
+          "FieldName": "Seller address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Type",
+          "FieldName": "FreeHold/LeaseHold",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Solicitoraddress",
+          "FieldName": "Seller Solicitors",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.SolicitorRef",
+          "FieldName": "Sol Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.CompletionDate",
+          "FieldName": "Completion Date",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Seller2",
+          "FieldName": "Seller 2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Seller3",
+          "FieldName": "Seller 3",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Seller4",
+          "FieldName": "Seller 4",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Selleraddress2",
+          "FieldName": "Seller address 2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Selleraddress3",
+          "FieldName": "Seller address 3",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Selleraddress4",
+          "FieldName": "Seller address 4",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Deceased",
+          "FieldName": "IsDeceased",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.Isattorney",
+          "FieldName": "Isattorney",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingContract.Contract1.IsVacant",
+          "FieldName": "IsVacant",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstandingTransfer.Lease",
+      "Group": "Taylor Bot",
+      "Category": "document understanding Transfer",
+      "Name": "Lease",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.LandlordTitleNumber",
+          "FieldName": "Landlord Title Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.LandlordName",
+          "FieldName": "Landlord Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.Landlordaddress",
+          "FieldName": "Landlord address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.Term(StartDate)",
+          "FieldName": "Term(Start Date)",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.Term(EndDate)",
+          "FieldName": "Term Duration",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.Rent",
+          "FieldName": "Rent",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.RentReviewDate",
+          "FieldName": "Rent Review Date",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingTransfer.Lease.CompletionDate",
+          "FieldName": "Completion Date",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstandingOfficecopy.OfficeCopy",
+      "Group": "Taylor Bot",
+      "Category": "document understanding Office copy",
+      "Name": "Office Copy",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstandingOfficecopy.OfficeCopy.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstandingOfficecopy.OfficeCopy.LocalAuthority",
+          "FieldName": "Local Authority",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingOfficecopy.OfficeCopy.FreeHoldLeaseHold",
+          "FieldName": "FreeHold/LeaseHold",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingOfficecopy.OfficeCopy.Proprietor",
+          "FieldName": "Proprietor",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingOfficecopy.OfficeCopy.Propertyaddress",
+          "FieldName": "Property address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstandingInstructionform.Instruction",
+      "Group": "Taylor Bot",
+      "Category": "document understanding Instruction form",
+      "Name": "Instruction",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.ClientName",
+          "FieldName": "Client Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.ClientAddress",
+          "FieldName": "Client Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.NINnumber",
+          "FieldName": "NIN number",
+          "IsMultiValue": true,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.FirstTimeBuyer",
+          "FieldName": "First Time Buyer",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.livinginthepropertyorrentingout(AdditionalResidence)",
+          "FieldName": "living in the property or renting out (Additional Residence)",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.IndividualCompany",
+          "FieldName": "Individual/Company",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.ClientName2",
+          "FieldName": "Client Name2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.clientAddress2",
+          "FieldName": "Client Address2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.ClientName3",
+          "FieldName": "Client Name3",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.ClientAddress3",
+          "FieldName": "Client Address3",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.Twoormoreproperty",
+          "FieldName": "Two or more property",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.ClientName4",
+          "FieldName": "Client Name4",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.ClientAddress4",
+          "FieldName": "Client Address4",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.NINNumber1",
+          "FieldName": "NIN Number 1",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.NINNumber2",
+          "FieldName": "NIN Number 2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.NINNumber3",
+          "FieldName": "NIN Number 3",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingInstructionform.Instruction.NINNumber4",
+          "FieldName": "NIN Number 4",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "sdlt.documentunderstandingforCML.CML",
+      "Group": "sdlt",
+      "Category": "document understanding for CML",
+      "Name": "CML",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "sdlt.documentunderstandingforCML.CML.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "sdlt.documentunderstandingforCML.CML.Postaladdress",
+          "FieldName": "Postal address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "sdlt.documentunderstandingforCML.CML.postcode",
+          "FieldName": "postcode",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "sdlt.documentunderstandingforstatement.statement",
+      "Group": "sdlt",
+      "Category": "document understanding for statement",
+      "Name": "statement",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "sdlt.documentunderstandingforstatement.statement.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "sdlt.documentunderstandingforstatement.statement.purchaseprice",
+          "FieldName": "purchase price",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "sdlt.documentunderstandingforstatement.statement.SDLTtax",
+          "FieldName": "SDLT stamp Duty",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "sdlt.documentunderstandingforstatement.statement.NPV",
+          "FieldName": "NPV",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "TaylorBot.documentunderstandingcertifiedid.MultipleID",
+      "Group": "Taylor Bot",
+      "Category": "document understanding certified id",
+      "Name": "Multiple ID",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "TaylorBot.documentunderstandingcertifiedid.MultipleID.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.MultipleID.FirstName",
+          "FieldName": "First Name",
+          "IsMultiValue": true,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.MultipleID.MiddleName",
+          "FieldName": "Middle Name",
+          "IsMultiValue": true,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.MultipleID.LastName",
+          "FieldName": "Last Name",
+          "IsMultiValue": true,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.MultipleID.DOB",
+          "FieldName": "DOB",
+          "IsMultiValue": true,
+          "Type": "Date",
+          "DeriveFieldsFormat": "MMDDYY",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.MultipleID.Country",
+          "FieldName": "Country",
+          "IsMultiValue": true,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "FieldId": "TaylorBot.documentunderstandingcertifiedid.MultipleID.DLPassportNumber",
+          "FieldName": "DL/Passport Number",
+          "IsMultiValue": true,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "RequiresReference",
+              "Value": "true"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Groups": [
+    {
+      "Name": "Taylor Bot",
+      "Categories": [
+        "document understanding certified id",
+        "document understanding Contract",
+        "document understanding Instruction form",
+        "document understanding Office copy",
+        "document understanding Transfer"
+      ]
+    },
+    {
+      "Name": "UK",
+      "Categories": []
+    },
+    {
+      "Name": "sdlt",
+      "Categories": [
+        "document understanding for CML",
+        "document understanding for statement"
+      ]
+    }
+  ],
+  "SupportedLanguages": [
+    {
+      "Name": "Undetermined Language",
+      "Code": "und"
+    },
+    {
+      "Name": "Bulgarian",
+      "Code": "bul"
+    },
+    {
+      "Name": "Cantonese",
+      "Code": "yue"
+    },
+    {
+      "Name": "Danish",
+      "Code": "dan"
+    },
+    {
+      "Name": "Dutch",
+      "Code": "nld"
+    },
+    {
+      "Name": "English",
+      "Code": "eng"
+    },
+    {
+      "Name": "French",
+      "Code": "fra"
+    },
+    {
+      "Name": "Georgian",
+      "Code": "kat"
+    },
+    {
+      "Name": "German",
+      "Code": "deu"
+    },
+    {
+      "Name": "Greek",
+      "Code": "ell"
+    },
+    {
+      "Name": "Hebrew",
+      "Code": "heb"
+    },
+    {
+      "Name": "Hindi",
+      "Code": "hin"
+    },
+    {
+      "Name": "Italian",
+      "Code": "ita"
+    },
+    {
+      "Name": "Japanese",
+      "Code": "jpn"
+    },
+    {
+      "Name": "Korean",
+      "Code": "kor"
+    },
+    {
+      "Name": "Macedonian",
+      "Code": "mkd"
+    },
+    {
+      "Name": "Mandarin",
+      "Code": "zho"
+    },
+    {
+      "Name": "Marathi",
+      "Code": "mar"
+    },
+    {
+      "Name": "Norwegian",
+      "Code": "nor"
+    },
+    {
+      "Name": "Polish",
+      "Code": "pol"
+    },
+    {
+      "Name": "Portuguese",
+      "Code": "por"
+    },
+    {
+      "Name": "Romanian",
+      "Code": "ron"
+    },
+    {
+      "Name": "Russian",
+      "Code": "rus"
+    },
+    {
+      "Name": "Serbian",
+      "Code": "srp"
+    },
+    {
+      "Name": "Spanish",
+      "Code": "spa"
+    },
+    {
+      "Name": "Swedish",
+      "Code": "swe"
+    },
+    {
+      "Name": "Telugu",
+      "Code": "tel"
+    }
+  ]
+}

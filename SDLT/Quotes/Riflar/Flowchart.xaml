@@ -1,0 +1,747 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="File_Name" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1689,1101</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Flowchart_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="46">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="26">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="1699,1036" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="Client_1" />
+      <Variable x:TypeArguments="x:String" Name="Property_Address" />
+      <Variable x:TypeArguments="x:Boolean" Name="Client_NameExists" />
+      <Variable x:TypeArguments="x:String" Name="Created_Date" />
+      <Variable x:TypeArguments="x:String" Name="Team" />
+      <Variable x:TypeArguments="x:String" Name="Transaction_Type" />
+      <Variable x:TypeArguments="x:String" Name="Other" />
+      <Variable x:TypeArguments="x:String" Name="Developer_Name" />
+      <Variable x:TypeArguments="x:String" Name="Development_Name" />
+      <Variable x:TypeArguments="x:String" Name="Door_Number" />
+      <Variable x:TypeArguments="x:String" Name="Property_County" />
+      <Variable x:TypeArguments="x:String" Name="Property_Post_Code" />
+      <Variable x:TypeArguments="x:Int32" Name="Property_Price" />
+      <Variable x:TypeArguments="x:String" Name="Property_Type" />
+      <Variable x:TypeArguments="x:String" Name="Mortgage" />
+      <Variable x:TypeArguments="x:String" Name="HTB_Scheme" />
+      <Variable x:TypeArguments="x:String" Name="Isthe_Customer" />
+      <Variable x:TypeArguments="x:String" Name="Second_Charge" />
+      <Variable x:TypeArguments="x:String" Name="Current_Lender" />
+      <Variable x:TypeArguments="x:String" Name="New_Lender" />
+      <Variable x:TypeArguments="x:String" Name="Equity_to_be_Released" />
+      <Variable x:TypeArguments="x:String" Name="Current_Owners" />
+      <Variable x:TypeArguments="x:String" Name="New_Owners" />
+      <Variable x:TypeArguments="x:String" Name="Any_consideration" />
+      <Variable x:TypeArguments="x:String" Name="Client_1_Contact_No" />
+      <Variable x:TypeArguments="x:String" Name="Client_1_Email_Id" />
+      <Variable x:TypeArguments="x:String" Name="Client_2" />
+      <Variable x:TypeArguments="x:String" Name="Client_2_Contact_No" />
+      <Variable x:TypeArguments="x:String" Name="Client_2_Email_Id" />
+      <Variable x:TypeArguments="x:String" Name="Client_3" />
+      <Variable x:TypeArguments="x:String" Name="Client_3_Contact_No" />
+      <Variable x:TypeArguments="x:String" Name="Client_3_Email_Id" />
+      <Variable x:TypeArguments="x:Int32" Name="Row_counter" />
+      <Variable x:TypeArguments="x:Boolean" Name="Find_Client" />
+      <Variable x:TypeArguments="x:String" Name="Email" />
+      <Variable x:TypeArguments="x:String" Name="Name" />
+      <Variable x:TypeArguments="x:String" Name="Your_Name" />
+      <Variable x:TypeArguments="x:String" Name="Your_Email_id" />
+      <Variable x:TypeArguments="x:String" Name="Transaction2" />
+      <Variable x:TypeArguments="x:String" Name="Your_Name2" />
+      <Variable x:TypeArguments="x:String" Name="Your_Emailid2" />
+      <Variable x:TypeArguments="x:String" Name="Transaction3" />
+      <Variable x:TypeArguments="x:String" Name="Plot_Number" />
+      <Variable x:TypeArguments="x:String" Name="Address" />
+      <Variable x:TypeArguments="x:String" Name="Country" />
+      <Variable x:TypeArguments="x:String" Name="Post_code" />
+      <Variable x:TypeArguments="x:Int32" Name="Purchase_price" />
+      <Variable x:TypeArguments="x:String" Name="Purchasing_with_Mortgage" />
+      <Variable x:TypeArguments="x:String" Name="Purchasing_under_a_HTB_scheme" />
+      <Variable x:TypeArguments="x:String" Name="Is_the_customer" />
+      <Variable x:TypeArguments="x:String" Name="If_Purchasing_additional_property" />
+      <Variable x:TypeArguments="x:String" Name="House_Number" />
+      <Variable x:TypeArguments="x:String" Name="Address_Line_1" />
+      <Variable x:TypeArguments="x:String" Name="Address_Line_2" />
+      <Variable x:TypeArguments="x:String" Name="Post_code2" />
+      <Variable x:TypeArguments="x:String" Name="Purchase_price2" />
+      <Variable x:TypeArguments="x:String" Name="Purchasing_with_Mortgage2" />
+      <Variable x:TypeArguments="x:String" Name="Purchasing_under_a_HTB_scheme2" />
+      <Variable x:TypeArguments="x:String" Name="Is_the_customer2" />
+      <Variable x:TypeArguments="x:String" Name="Is_this_an_additional_property" />
+      <Variable x:TypeArguments="x:String" Name="Address2" />
+      <Variable x:TypeArguments="x:String" Name="County2" />
+      <Variable x:TypeArguments="x:String" Name="Post_code3" />
+      <Variable x:TypeArguments="x:String" Name="Sale_price" />
+      <Variable x:TypeArguments="x:String" Name="Is_there_a_Mortgage_over_the_property" />
+      <Variable x:TypeArguments="x:String" Name="Is_there_a_second_charge_on_the_property" />
+      <Variable x:TypeArguments="x:String" Name="Name_of_the_current_Lender" />
+      <Variable x:TypeArguments="x:String" Name="Name_of_the_new_Lender" />
+      <Variable x:TypeArguments="x:String" Name="Post_Code4" />
+      <Variable x:TypeArguments="x:String" Name="Do_you_expect_equity_to_be_released" />
+      <Variable x:TypeArguments="x:String" Name="Property_Address2" />
+      <Variable x:TypeArguments="x:String" Name="Post_Code5" />
+      <Variable x:TypeArguments="x:String" Name="Is_there_Mortgage_over_property" />
+      <Variable x:TypeArguments="x:String" Name="Salutation" />
+      <Variable x:TypeArguments="x:String" Name="First_Name" />
+      <Variable x:TypeArguments="x:String" Name="Middle_Name" />
+      <Variable x:TypeArguments="x:String" Name="Last_Name" />
+      <Variable x:TypeArguments="x:String" Name="Contact_number" />
+      <Variable x:TypeArguments="x:String" Name="Email_ID" />
+      <Variable x:TypeArguments="x:String" Name="Do_you_have_Client2" />
+      <Variable x:TypeArguments="x:String" Name="Salutation2" />
+      <Variable x:TypeArguments="x:String" Name="First_Name2" />
+      <Variable x:TypeArguments="x:String" Name="Middle_Name2" />
+      <Variable x:TypeArguments="x:String" Name="Last_Name2" />
+      <Variable x:TypeArguments="x:String" Name="Contact_number2" />
+      <Variable x:TypeArguments="x:String" Name="Email_ID2" />
+      <Variable x:TypeArguments="x:String" Name="Do_you_have_Client3" />
+      <Variable x:TypeArguments="x:String" Name="Email_ID3" />
+      <Variable x:TypeArguments="x:String" Name="Contact_number3" />
+      <Variable x:TypeArguments="x:String" Name="Last_Name3" />
+      <Variable x:TypeArguments="x:String" Name="Middle_Name3" />
+      <Variable x:TypeArguments="x:String" Name="First_Name3" />
+      <Variable x:TypeArguments="x:String" Name="Salutation3" />
+      <Variable x:TypeArguments="x:String" Name="Sdlt_Amount" />
+      <Variable x:TypeArguments="x:Boolean" Name="Two_or_More_Property" />
+      <Variable x:TypeArguments="x:Boolean" Name="Living_in_Property" />
+      <Variable x:TypeArguments="x:String" Name="Sdlt_price" />
+      <Variable x:TypeArguments="x:String" Name="SDLT_Amounts" />
+      <Variable x:TypeArguments="x:String" Name="Total_charges" />
+      <Variable x:TypeArguments="x:String" Name="UCRN_Number" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">520,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">550,77.5 550,127.5</av:PointCollection>
+        <x:Double x:Key="Width">1665</x:Double>
+        <x:Double x:Key="Height">1000</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID17</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID17">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">450,127.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">550,178.5 550,224.02</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Extracting data from excel workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Extracting data from excel.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:Int32" x:Key="CurrentRow_Counter">[Row_counter]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Email">[Email]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Name">[Name]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Team">[Team]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Your_Name">[Your_Name]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="YourEmail_ID">[Your_Email_id]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Transaction2">[Transaction2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Your_Name2">[Your_Name2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="YourEmail_ID2">[Your_Emailid2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Transaction3">[Transaction3]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Developer_Name">[Developer_Name]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Development_Name">[Development_Name]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Plot_Number">[Plot_Number]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Address">[Address]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="County">[Country]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Post_code">[Post_code]</OutArgument>
+          <OutArgument x:TypeArguments="x:Int32" x:Key="Purchase_price">[Purchase_price]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Purchasing_with_Mortgage">[Purchasing_with_Mortgage]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Purchasing_under_a_HTB_scheme">[Purchasing_under_a_HTB_scheme]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Is_the_customer">[Is_the_customer]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="If_Purchasing_additional_property">[If_Purchasing_additional_property]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="House_Number">[House_Number]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Address_Line_1">[Address_Line_1]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Address_Line_2">[Address_Line_2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Post_code2">[Post_code2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Purchase_price2">[Purchase_price2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Purchasing_with_Mortgage2">[Purchasing_with_Mortgage2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Purchasing_under_a_HTB_scheme2">[Purchasing_under_a_HTB_scheme2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Is_the_customer2">[Is_the_customer2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Is_this_an_additional_property">[Is_this_an_additional_property]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Door_Number">[Door_Number]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Address2">[Address2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="County2">[County2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Post_code3">[Post_code3]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Sale_price">[Sale_price]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Is_there_a_Mortgage_over_the_property">[Is_there_a_Mortgage_over_the_property]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Is_there_a_second_charge_on_the_property">[Is_there_a_second_charge_on_the_property]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Name_of_the_current_Lender">[Name_of_the_current_Lender]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Name_of_the_new_Lender">[Name_of_the_new_Lender]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Property_Address">[Property_Address]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Post_Code4">[Post_Code4]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Do_you_expect_equity_to_be_released">[Do_you_expect_equity_to_be_released]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Property_Address2">[Property_Address2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Post_Code5">[Post_Code5]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Current_Owners">[Current_Owners]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="New_Owners">[New_Owners]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Is_there_Mortgage_over_property">[Is_there_Mortgage_over_property]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Any_consideration">[Any_consideration]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Salutation">[Salutation]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="First_Name">[First_Name]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Middle_Name">[Middle_Name]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Last_Name">[Last_Name]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Contact_number">[Contact_number]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Email_ID">[Email_ID]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Do_you_have_Client2">[Do_you_have_Client2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Salutation2">[Salutation2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="First_Name2">[First_Name2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Middle_Name2">[Middle_Name2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Last_Name2">[Last_Name2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Contact_number2">[Contact_number2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Email_ID2">[Email_ID2]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Do_you_have_Client3">[Do_you_have_Client3]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Salutation3">[Salutation3]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="First_Name3">[First_Name3]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Middle_Name3">[Middle_Name3]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Last_Name3">[Last_Name3]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Contact_number3">[Contact_number3]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Email_ID3">[Email_ID3]</OutArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="Two_or_More_Property">[Two_or_More_Property]</OutArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="Living_in_Property">[Living_in_Property]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="File_Name">[File_Name]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">450,224.02</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">550,275.02 550,305.02 550.141666666667,305.02 550.141666666667,329.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ConflictCheck workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\ConflictCheck.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="Client_1">[Client_1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Property_Address">[Property_Address]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Client_NameExists">[Client_NameExists]</OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="First_Name">[First_Name]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Last_Name">[Last_Name]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Development_Name">[Development_Name]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Plot_Number">[Plot_Number]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <FlowStep.Next>
+            <FlowDecision x:Name="__ReferenceID0" Condition="[Client_NameExists = True]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">510.641666666667,329.5</av:Point>
+                  <av:Size x:Key="ShapeSize">79,87</av:Size>
+                  <av:PointCollection x:Key="TrueConnector">510.641666666667,373 480.641666666667,373 480.641666666667,369.52 370,369.52</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">589.641666666667,373 619.641666666667,373 619.641666666667,369.52 740,369.52</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <FlowDecision.True>
+                <FlowStep x:Name="__ReferenceID15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">170,344.02</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sending_mail workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Sending_mail.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                </FlowStep>
+              </FlowDecision.True>
+              <FlowDecision.False>
+                <FlowStep x:Name="__ReferenceID16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">740,344.02</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">940,369.52 969.783333333334,369.52 969.783333333334,448.02</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Creating new quote workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Creating new quote.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Find_Client">[Find_Client]</OutArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                  <FlowStep.Next>
+                    <FlowDecision x:Name="__ReferenceID1" Condition="[Find_Client = True]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">930.283333333334,448.02</av:Point>
+                          <av:Size x:Key="ShapeSize">79,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">930.283333333334,491.52 900.283333333334,491.52 900.283333333334,491.04 870.283333333334,491.04</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">1009.28333333333,491.52 1210,491.52 1210,400</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">670.283333333334,465.54</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">770.283333333334,516.54 770.283333333334,546.54 770,546.54 770,564.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke get_personal_address workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\get_personal_address.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="First_Name">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="First_Name" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Middle_Name">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Middle_Name" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Last_Name">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Last_Name" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Contact_number">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Contact_number" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Email_ID">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Email_ID" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Address">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Address" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="County" />
+                              <InArgument x:TypeArguments="x:String" x:Key="Post_code">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Post_code" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Email_ID2">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Email_ID2" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="First_Name2">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="First_Name2" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Middle_Name2">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Middle_Name2" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Last_Name2">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Last_Name2" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Salutation">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Salutation" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Salutation2">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Salutation2" />
+                              </InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InvokeWorkflowFile>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">670,564.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">770,615.5 770,645.5 770.283333333334,645.5 770.283333333334,667.54</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Matter_type workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Matter_type.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="transaction_type">[Transaction2]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Team">[Team]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Developer_Name">[Developer_Name]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Development_Name">[Development_Name]</InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InvokeWorkflowFile>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID4">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">670.283333333334,667.54</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">770.283333333334,718.54 770.283333333334,748.54 770,748.54 770,754.5</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke purchaseAddress workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\purchaseAddress.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Property_Address">[Property_Address]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Property_County">[Property_County]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Property_Post_Code">[Property_Post_Code]</InArgument>
+                                      <InArgument x:TypeArguments="x:Int32" x:Key="Property_Price">[Property_Price]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Transaction_Type">[Transaction2]</InArgument>
+                                      <InArgument x:TypeArguments="x:Int32" x:Key="Purchase_price">[Purchase_price]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Development_Name">[Development_Name]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Plot_Number">[Plot_Number]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="County" />
+                                      <InArgument x:TypeArguments="x:String" x:Key="Post_code">[Post_code]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:InvokeWorkflowFile>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID7">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">670,754.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">770,805.5 770,844.02</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Calculate_sdlt workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Calculate_sdlt.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="In_URL">https://www.tax.service.gov.uk/calculate-stamp-duty-land-tax/</InArgument>
+                                          <InArgument x:TypeArguments="x:Boolean" x:Key="Is_UKResident">True</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Is_the_customer">[Is_the_customer]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="If_Purchasing_additional_property">[If_Purchasing_additional_property]</InArgument>
+                                          <OutArgument x:TypeArguments="x:String" x:Key="SDLT_Amount">[SDLT_Amounts]</OutArgument>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="Purchase_price">[Purchase_price]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:InvokeWorkflowFile>
+                                      <FlowStep.Next>
+                                        <FlowStep x:Name="__ReferenceID8">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">670,844.02</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">870,869.52 900,869.52 900,870 910,870</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Billing workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Billing.xaml">
+                                            <ui:InvokeWorkflowFile.Arguments>
+                                              <InArgument x:TypeArguments="x:Int32" x:Key="Property_Price">[Property_Price]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Developer_Name">[Developer_Name]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Property_Address">[Property_Address]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="sdlt_price">[Sdlt_price]</InArgument>
+                                              <InArgument x:TypeArguments="x:Int32" x:Key="Purchase_price">[Purchase_price]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="SDLT_Amount">[SDLT_Amounts]</InArgument>
+                                              <OutArgument x:TypeArguments="x:String" x:Key="Total_charges">[Total_charges]</OutArgument>
+                                            </ui:InvokeWorkflowFile.Arguments>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:InvokeWorkflowFile>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID5">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">910,844.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">1010,844.5 1010,793.54</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Initial Quote Pack workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Initial Quote Pack.xaml">
+                                                <ui:InvokeWorkflowFile.Arguments>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="Address">[Address]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="First_Name">[First_Name]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="Middle_Name">[Middle_Name]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="Last_Name">[Last_Name]</InArgument>
+                                                  <InArgument x:TypeArguments="x:Int32" x:Key="Purchase_price">[Purchase_price]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="Total_charges">[Total_charges]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="Team">[Team]</InArgument>
+                                                </ui:InvokeWorkflowFile.Arguments>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:InvokeWorkflowFile>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID9">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">910,742.54</av:Point>
+                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">1010,742.54 1010,691.58</av:PointCollection>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Save Email workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Save Email.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:InvokeWorkflowFile>
+                                                  <FlowStep.Next>
+                                                    <FlowStep x:Name="__ReferenceID10">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">910,640.58</av:Point>
+                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">1010,640.58 1010,599.62</av:PointCollection>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Renaming document workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Renaming document.xaml">
+                                                        <ui:InvokeWorkflowFile.Arguments>
+                                                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                        </ui:InvokeWorkflowFile.Arguments>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </ui:InvokeWorkflowFile>
+                                                      <FlowStep.Next>
+                                                        <FlowStep x:Name="__ReferenceID11">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">910,548.62</av:Point>
+                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">1110,574.12 1140,574.12 1140,573.64 1160,573.64</av:PointCollection>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RiskAssesment workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\RiskAssesment.xaml">
+                                                            <ui:InvokeWorkflowFile.Arguments>
+                                                              <InArgument x:TypeArguments="x:Int32" x:Key="Property_Price">[Property_Price]</InArgument>
+                                                              <InArgument x:TypeArguments="x:Int32" x:Key="Purchase_price">[Purchase_price]</InArgument>
+                                                              <OutArgument x:TypeArguments="x:String" x:Key="UCRN_No">[UCRN_Number]</OutArgument>
+                                                            </ui:InvokeWorkflowFile.Arguments>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </ui:InvokeWorkflowFile>
+                                                          <FlowStep.Next>
+                                                            <FlowStep x:Name="__ReferenceID12">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <av:Point x:Key="ShapeLocation">1160,548.14</av:Point>
+                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                  <av:PointCollection x:Key="ConnectorLocation">1260,599.14 1260,649.14</av:PointCollection>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PurchaseExtra workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\PurchaseExtra.xaml">
+                                                                <ui:InvokeWorkflowFile.Arguments>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                                </ui:InvokeWorkflowFile.Arguments>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:InvokeWorkflowFile>
+                                                              <FlowStep.Next>
+                                                                <FlowStep x:Name="__ReferenceID13">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <av:Point x:Key="ShapeLocation">1160,649.14</av:Point>
+                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Click conflict check workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Click conflict check.xaml">
+                                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                  </ui:InvokeWorkflowFile>
+                                                                </FlowStep>
+                                                              </FlowStep.Next>
+                                                            </FlowStep>
+                                                          </FlowStep.Next>
+                                                        </FlowStep>
+                                                      </FlowStep.Next>
+                                                    </FlowStep>
+                                                  </FlowStep.Next>
+                                                </FlowStep>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowStep.Next>
+                                    </FlowStep>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">1079,340</av:Point>
+                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[Row_counter]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Row_counter + 1]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                        </FlowStep>
+                      </FlowDecision.False>
+                    </FlowDecision>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowDecision.False>
+            </FlowDecision>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">0,237.02</av:Point>
+          <av:Size x:Key="ShapeSize">262,60</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[Row_counter]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[Row_counter + 1]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
+    <x:Reference>__ReferenceID12</x:Reference>
+    <x:Reference>__ReferenceID13</x:Reference>
+    <x:Reference>__ReferenceID14</x:Reference>
+    <x:Reference>__ReferenceID15</x:Reference>
+    <x:Reference>__ReferenceID16</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">1170,744.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sending final report workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="C:\Users\anza.botserver\Documents\Quotes\Sending final report.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="UCRN_number">[UCRN_Number]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+    </FlowStep>
+  </Flowchart>
+</Activity>
