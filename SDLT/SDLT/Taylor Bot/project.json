@@ -1,5 +1,6 @@
 {
   "name": "Taylor Bot",
+  "projectId": "bf73da89-f383-4752-8cbe-708174bb1052",
   "description": "Fetch the data from RPM",
   "main": "Main.xaml",
   "dependencies": {
@@ -16,16 +17,21 @@
   "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
