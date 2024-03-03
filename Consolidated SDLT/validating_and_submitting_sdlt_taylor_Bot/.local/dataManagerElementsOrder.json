@@ -1,0 +1,128 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Rpm_excel&Sequence_1",
+        "document_excel&Sequence_1",
+        "rpm_dt&Sequence_1",
+        "doc_dt&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_document",
+        "in_rpm"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Read Extracted Data.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "comp_date&Sequence_1",
+        "non_uk_resident&Sequence_1",
+        "lease_date&Sequence_1",
+        "previous_owned_or_part_owned_property&Sequence_1",
+        "lease_start_date&Sequence_1",
+        "sdlt_price&Sequence_1",
+        "CompDateMonth&Sequence_1",
+        "CompDate&Sequence_1",
+        "CompYear&Sequence_1",
+        "RowCounter&Sequence_1",
+        "IsPreviousProperty&Sequence_1",
+        "IsMainResidense&Sequence_1",
+        "IsSharedOwnership&Sequence_1",
+        "InFileName&Sequence_1",
+        "ExistingPDF&Sequence_1",
+        "PDFPath&Sequence_4",
+        "finaldt&Sequence_2",
+        "MainResidense&Sequence_3",
+        "Doc_StampDuty&Sequence_3",
+        "SellerName&Sequence_3",
+        "Transferor&Sequence_3",
+        "MatterType&Sequence_3",
+        "leasehold_or_freehold&Sequence_58",
+        "residential_or_nonresidential&Sequence_58",
+        "completion_date&Sequence_58",
+        "individual_or_company&Sequence_58",
+        "owning_property&Sequence_58",
+        "main_residence&Sequence_58",
+        "purchase_price&Sequence_58",
+        "lease_premium&Sequence_58",
+        "annual_rent&Sequence_58",
+        "calculate_sdlt&Sequence_58",
+        "normal&Sequence_58",
+        "sdlt_question&Sequence_55",
+        "lease_end_date&Sequence_63",
+        "LeaseMonth&Sequence_63",
+        "LeaseStartDate&Sequence_63",
+        "LeaseStartYear&Sequence_63",
+        "LeaseEndMonth&Sequence_63",
+        "LeaseEndDate&Sequence_63",
+        "LeaseEndYear&Sequence_63",
+        "count&Sequence_51",
+        "NPV&Sequence_57"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_ClientType",
+        "Out_PurchasePrice",
+        "Out_IsUKResident",
+        "Out_TransactionType",
+        "Out_CompletionDate",
+        "Out_IsStayinProperty",
+        "Out_StartLeaseDate",
+        "Out_EndLeaseDate",
+        "Out_AnualRent",
+        "Out_PropertyType",
+        "Out_IsMultipleProperty",
+        "MultipleProperty",
+        "in_replacing_main_residence",
+        "In_previous_owned_or_part_owned_property",
+        "IO_CaseNumber",
+        "In_PDFPath",
+        "Out_FileName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Download Calculation PDF.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "tabcounter&Sequence_1",
+        "IsPDF&Sequence_1",
+        "ExistingPDF&Sequence_1",
+        "ArrPDF&Sequence_5",
+        "IsReplace&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_CaseNumber",
+        "OutPDFPath"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Update Cases in Master File.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "tempdt&Sequence_1",
+        "dt&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_FileName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

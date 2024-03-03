@@ -1,0 +1,83 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExistingFile&Sequence_1",
+        "ProcessingTempDT&Sequence_7",
+        "MappingDT&Flowchart_1",
+        "ExtractedDT&Flowchart_1",
+        "ProcessingDT&Flowchart_1",
+        "FinalDT&Flowchart_1",
+        "ExtractedDTString&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "MappingFile",
+        "ExtractedFile",
+        "ProcessingFile",
+        "FinalFile",
+        "In_ToEmail",
+        "In_CCEmail",
+        "DocoumentExcptionFile"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SDLT Pre Calculation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "In_CaseNo&Sequence_4",
+        "CaseNo&Sequence_3",
+        "LivingInProperty&Sequence_3",
+        "ClientAddress&Sequence_3",
+        "PropertyAddress&Sequence_3",
+        "TransactionType&Sequence_3",
+        "PostalAddress&Sequence_3",
+        "NIN1&Sequence_3",
+        "NIN2&Sequence_3",
+        "NIN3&Sequence_3",
+        "NIN4&Sequence_3",
+        "FinalNIN&Sequence_3",
+        "DocNIN&Sequence_3",
+        "RPMNIN&Sequence_3",
+        "TermStartDate&Sequence_3",
+        "TermEndDate&Sequence_3",
+        "TDuration&Sequence_3",
+        "Rent&Sequence_3",
+        "LandlordsName&Sequence_3",
+        "LandlordsTitleNumber&Sequence_3",
+        "FinalDt&Sequence_3",
+        "TermDuration&Sequence_3",
+        "Counter&Sequence_3",
+        "TEndDate&Sequence_3",
+        "TStartDate&Sequence_3",
+        "Is_LivingInProperty&Sequence_3",
+        "TermStartDate&Sequence_1",
+        "TermEndDate&Sequence_1",
+        "TDuration&Sequence_1",
+        "Rent&Sequence_1",
+        "LandlordsName&Sequence_1",
+        "LandlordsTitleNumber&Sequence_1",
+        "FinalDt&Sequence_1",
+        "TermDuration&Sequence_1",
+        "Counter&Sequence_1",
+        "TEndDate&Sequence_1",
+        "TStartDate&Sequence_1",
+        "Is_LivingInProperty&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

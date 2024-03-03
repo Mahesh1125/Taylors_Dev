@@ -1,0 +1,593 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Primary_Purchaser" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="PrimaryPurchaser" Type="OutArgument(x:String)" />
+    <x:Property Name="Primary_NINNumber" Type="OutArgument(x:String)" />
+    <x:Property Name="In_DOB" Type="InOutArgument(x:String)" />
+    <x:Property Name="Out_building_name" Type="OutArgument(x:String)" />
+    <x:Property Name="Out_BuildingNumber" Type="OutArgument(x:String)" />
+    <x:Property Name="Out_Address1" Type="OutArgument(x:String)" />
+    <x:Property Name="Out_Address2" Type="OutArgument(x:String)" />
+    <x:Property Name="Out_City" Type="OutArgument(x:String)" />
+    <x:Property Name="Out_Country" Type="OutArgument(x:String)" />
+    <x:Property Name="Out_PostCode" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1376,5150</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Primary_Purchaser_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="28">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Primary_Purchaser" sap:VirtualizedContainerService.HintSize="682,5085" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="names" />
+      <Variable x:TypeArguments="x:Int32" Name="indx" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'redbrickpm.exe Redbrick'" sap:VirtualizedContainerService.HintSize="640,260" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="7c11dedfdb8b1fdd3ac7ad63b849103d" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WindowScope>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'outline item'" sap:VirtualizedContainerService.HintSize="640,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b27ddd57-3b00-4781-8e1c-e82979f00d39" InformativeScreenshot="d5e0b5966d58074ebdffc7c437d13d7b" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='tvPages' /&gt;&lt;ctrl name='*' role='outline item' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">[names]</OutArgument>
+      </ui:GetValue.Value>
+    </ui:GetValue>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[indx]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="640,4547" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[System.Text.RegularExpressions.Regex.Split(names,&quot;,|and&quot;)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,4413" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="NInumber" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="562,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item]" />
+            <ui:ClickText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" FormattedText="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Text 'WindowsForms10.SysTreeV...'" sap:VirtualizedContainerService.HintSize="562,134" sap2010:WorkflowViewState.IdRef="ClickText_1" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="[indx+1]" Text="Personal">
+              <ui:ClickText.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:ClickText.CursorPosition>
+              <ui:ClickText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60552d1e-11b1-4ea0-b219-0870dad00c06" InformativeScreenshot="7b909732db0bbd461ac878028f9c5514" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='tvPages' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ClickText.Target>
+            </ui:ClickText>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="edbb270e-d0a5-4d75-bedd-e05ed29fe8c7" InformativeScreenshot="c44aa8bff9d6780eba065947856e33ed" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pName' idx='1' /&gt;&lt;wnd ctrlname='tbNationalInsurance' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[NInumber]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <If Condition="[Not(NInumber.Trim=&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="562,3900" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="526,3723" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="postcode" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484,333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch.Try>
+                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.SysDateT...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                        <ui:GetValue.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2b080efd-03cd-4fef-b4a8-51a60f1329b5" InformativeScreenshot="20a15c2270390522205762a30917d484" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pName' idx='1' /&gt;&lt;wnd ctrlname='dtDOB' aastate='checked, focusable' /&gt;" TimeoutMS="5000">
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetValue.Target>
+                        <ui:GetValue.Value>
+                          <OutArgument x:TypeArguments="x:String">[In_DOB]</OutArgument>
+                        </ui:GetValue.Value>
+                      </ui:GetValue>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Date of birth is not updated&quot;]" />
+                            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[In_DOB]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                  <ui:ClickText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" FormattedText="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Text 'WindowsForms10.SysTreeV...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="ClickText_2" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="[indx+1]" Text="Address">
+                    <ui:ClickText.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickText.CursorPosition>
+                    <ui:ClickText.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60552d1e-11b1-4ea0-b219-0870dad00c06" InformativeScreenshot="7b909732db0bbd461ac878028f9c5514" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='tvPages' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:ClickText.Target>
+                  </ui:ClickText>
+                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
+                    <ui:GetValue.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c5e0c0dd-37e8-47a1-82e6-f92ceee7734e" InformativeScreenshot="2c653fd3ac36133b74c45442b30e155a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbPostcode' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:GetValue.Target>
+                    <ui:GetValue.Value>
+                      <OutArgument x:TypeArguments="x:String">[postcode]</OutArgument>
+                    </ui:GetValue.Value>
+                  </ui:GetValue>
+                  <If Condition="[Not(postcode.Trim=&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="484,1467" sap2010:WorkflowViewState.IdRef="If_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,1290" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_PostCode]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[postcode]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                          <ui:GetValue.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b7aa87d-e2b3-40ec-8098-0c8c1134a448" InformativeScreenshot="d8562c9b95fec4e791e1a55b9ae4c62a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbBuildingName' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:GetValue.Target>
+                          <ui:GetValue.Value>
+                            <OutArgument x:TypeArguments="x:String">[Out_building_name]</OutArgument>
+                          </ui:GetValue.Value>
+                        </ui:GetValue>
+                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_6">
+                          <ui:GetValue.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9d63231-ec72-442c-ab80-cb9eddac8cd6" InformativeScreenshot="cc8ec6cd09140b3f94bca08e18456315" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbNumber' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:GetValue.Target>
+                          <ui:GetValue.Value>
+                            <OutArgument x:TypeArguments="x:String">[Out_BuildingNumber]</OutArgument>
+                          </ui:GetValue.Value>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:GetValue>
+                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_7">
+                          <ui:GetValue.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8378854f-9c3a-4ee2-866a-4b3e0b12bcea" InformativeScreenshot="9feb01dc90b7640c3fb45df88cdb3c1c" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbAddress1' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:GetValue.Target>
+                          <ui:GetValue.Value>
+                            <OutArgument x:TypeArguments="x:String">[Out_Address1]</OutArgument>
+                          </ui:GetValue.Value>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:GetValue>
+                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_8">
+                          <ui:GetValue.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="929f26b0-406a-46bf-80ff-eca4a485a1f6" InformativeScreenshot="9b50f9f9b8a8a0e77741715a7601905d" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbAddress2' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:GetValue.Target>
+                          <ui:GetValue.Value>
+                            <OutArgument x:TypeArguments="x:String">[Out_Address2]</OutArgument>
+                          </ui:GetValue.Value>
+                        </ui:GetValue>
+                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_9">
+                          <ui:GetValue.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9612c2a0-7b9f-4f3a-b111-1d29e8cbd4ba" InformativeScreenshot="5ba78b6ed160d8baa706683679d774a4" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbCity' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:GetValue.Target>
+                          <ui:GetValue.Value>
+                            <OutArgument x:TypeArguments="x:String">[Out_City]</OutArgument>
+                          </ui:GetValue.Value>
+                        </ui:GetValue>
+                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.COMBOBOX...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_10">
+                          <ui:GetValue.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2121f5cc-c4d2-44c4-8251-72c91e784199" InformativeScreenshot="cdf57f70910fcdd627ecbac8643645cf" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='cbCounty' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:GetValue.Target>
+                          <ui:GetValue.Value>
+                            <OutArgument x:TypeArguments="x:String">[Out_Country]</OutArgument>
+                          </ui:GetValue.Value>
+                        </ui:GetValue>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[PrimaryPurchaser]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[item.Trim]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Primary_NINNumber]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[NInumber]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                  <Sequence sap:VirtualizedContainerService.HintSize="484,1290" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Out_PostCode]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[postcode]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_11">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b7aa87d-e2b3-40ec-8098-0c8c1134a448" InformativeScreenshot="d8562c9b95fec4e791e1a55b9ae4c62a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbBuildingName' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Out_building_name]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_12">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9d63231-ec72-442c-ab80-cb9eddac8cd6" InformativeScreenshot="cc8ec6cd09140b3f94bca08e18456315" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbNumber' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Out_BuildingNumber]</OutArgument>
+                      </ui:GetValue.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GetValue>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_13">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8378854f-9c3a-4ee2-866a-4b3e0b12bcea" InformativeScreenshot="9feb01dc90b7640c3fb45df88cdb3c1c" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbAddress1' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Out_Address1]</OutArgument>
+                      </ui:GetValue.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GetValue>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_14">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="929f26b0-406a-46bf-80ff-eca4a485a1f6" InformativeScreenshot="9b50f9f9b8a8a0e77741715a7601905d" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbAddress2' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Out_Address2]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_15">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9612c2a0-7b9f-4f3a-b111-1d29e8cbd4ba" InformativeScreenshot="5ba78b6ed160d8baa706683679d774a4" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='tbCity' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Out_City]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'WindowsForms10.COMBOBOX...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_16">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2121f5cc-c4d2-44c4-8251-72c91e784199" InformativeScreenshot="cdf57f70910fcdd627ecbac8643645cf" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='ListManagerOptionsPanelDialog' /&gt;&lt;wnd ctrlname='opOptionsPanel' /&gt;&lt;wnd ctrlname='spSplitter' idx='1' /&gt;&lt;wnd ctrlname='fbPages' idx='1' /&gt;&lt;wnd ctrlname='pAddress' /&gt;&lt;wnd ctrlname='aeAddress' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='cbCounty' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Out_Country]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[PrimaryPurchaser]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[item.Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Primary_NINNumber]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[NInumber]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_2" />
+                  </Sequence>
+                  <Parallel sap:VirtualizedContainerService.HintSize="484,101" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Parallel>
+                </Sequence>
+              </If.Then>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

@@ -1,0 +1,571 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="sendEmailException" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_tr1_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_tp1_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_lease_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_contract_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_official_copy_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_instruction_form_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_certified_id_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_cml_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_statement_missing" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_workflow" Type="InArgument(x:String)" />
+    <x:Property Name="in_case_ref" Type="InArgument(x:String)" />
+    <x:Property Name="in_row_counter" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1226,973</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>sendEmailException_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="25">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="sendEmailException" sap:VirtualizedContainerService.HintSize="1236,908" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="tr1" />
+      <Variable x:TypeArguments="x:Boolean" Name="contract" />
+      <Variable x:TypeArguments="x:Boolean" Name="instruction_form" />
+      <Variable x:TypeArguments="x:Boolean" Name="certified_id" />
+      <Variable x:TypeArguments="x:Boolean" Name="office_copy" />
+      <Variable x:TypeArguments="x:Boolean" Name="statement" />
+      <Variable x:TypeArguments="x:String" Name="case_reference" />
+      <Variable x:TypeArguments="x:String" Name="matter_type" />
+      <Variable x:TypeArguments="x:Boolean" Name="tp1" />
+      <Variable x:TypeArguments="x:Boolean" Name="lease" />
+      <Variable x:TypeArguments="x:Boolean" Name="cml" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap:VirtualizedContainerService.HintSize="1194,816" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">710,22.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">740,97.5 740,144.5</av:PointCollection>
+          <x:Double x:Key="Width">1160</x:Double>
+          <x:Double x:Key="Height">779.56</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID5</x:Reference>
+      </Flowchart.StartNode>
+      <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID4" DisplayName="Flow Switch" Expression="[matter_type]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+        <FlowSwitch.Default>
+          <FlowStep x:Name="__ReferenceID0">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">300,237</av:Point>
+                <av:Size x:Key="ShapeSize">200,66</av:Size>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;unidentified workflow&quot;]" />
+            </Sequence>
+          </FlowStep>
+        </FlowSwitch.Default>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">705,226.5</av:Point>
+            <av:Size x:Key="ShapeSize">70,87</av:Size>
+            <av:PointCollection x:Key="Default">705,270 500,270</av:PointCollection>
+            <av:PointCollection x:Key="PurchaseConnector">775,270 900,270</av:PointCollection>
+            <av:PointCollection x:Key="New Build PurchaseConnector">722.5,313.5 722.5,343.5 540,343.5 540,567</av:PointCollection>
+            <av:PointCollection x:Key="NormalnewbuildConnector">757.5,313.5 757.5,343.5 950,343.5 950,567</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <FlowStep x:Key="Purchase" x:Name="__ReferenceID1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">900,237</av:Point>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="purchaseException" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="689,3469" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="E:\Taylors\Taylor Bot\Document exceptions.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="655,3360" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelWriteCell Cell="[&quot;A&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="[in_case_ref]" />
+                    <ui:ExcelWriteCell Cell="[&quot;B&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="[matter_type]" />
+                    <If Condition="[tr1]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_1" Range="[&quot;C&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_2" Range="[&quot;C&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;C&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Sheet1" Text="[tr1.ToString]" />
+                    <If Condition="[contract]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_3" Range="[&quot;E&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_4" Range="[&quot;E&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;E&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1" Text="[contract.ToString]" />
+                    <If Condition="[instruction_form]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_5" Range="[&quot;F&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_6" Range="[&quot;F&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;F&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Sheet1" Text="[instruction_form.ToString]" />
+                    <If Condition="[certified_id]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_7" Range="[&quot;K&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_8" Range="[&quot;K&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;K&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="Sheet1" Text="[certified_id.ToString]" />
+                    <If Condition="[office_copy]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_9" Range="[&quot;I&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_10" Range="[&quot;I&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;I&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Sheet1" Text="[office_copy.ToString]" />
+                    <If Condition="[statement]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_6">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_11" Range="[&quot;J&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_12" Range="[&quot;J&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;J&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Sheet1" Text="[statement.ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelApplicationScope>
+          </Sequence>
+        </FlowStep>
+        <FlowStep x:Key="Normalnewbuild" x:Name="__ReferenceID2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">850,567</av:Point>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="normalNewBuildException" sap:VirtualizedContainerService.HintSize="731,4579" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="689,4487" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="E:\Taylors\Taylor Bot\Document exceptions.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="655,4378" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelWriteCell Cell="[&quot;A&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="Sheet1" Text="[in_case_ref]" />
+                    <ui:ExcelWriteCell Cell="[&quot;B&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="Sheet1" Text="[matter_type]" />
+                    <If Condition="[tp1 and lease]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_15">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_29" Range="[&quot;D&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_30" Range="[&quot;D&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;D&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_21" SheetName="Sheet1" Text="[tp1.ToString]" />
+                    <If Condition="[contract]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_16">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_31" Range="[&quot;E&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_32" Range="[&quot;E&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;E&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_22" SheetName="Sheet1" Text="[contract.ToString]" />
+                    <If Condition="[instruction_form]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_17">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_33" Range="[&quot;F&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_34" Range="[&quot;F&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;F&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_23" SheetName="Sheet1" Text="[instruction_form.ToString]" />
+                    <If Condition="[certified_id]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_18">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_35" Range="[&quot;K&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_36" Range="[&quot;K&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;K&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_24" SheetName="Sheet1" Text="[certified_id.ToString]" />
+                    <If Condition="[office_copy]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_19">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_37" Range="[&quot;I&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_38" Range="[&quot;I&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;I&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_25" SheetName="Sheet1" Text="[office_copy.ToString]" />
+                    <If Condition="[statement]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_20">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_39" Range="[&quot;J&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_40" Range="[&quot;J&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;J&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_26" SheetName="Sheet1" Text="[statement.ToString]" />
+                    <If Condition="[cml]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_21">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_41" Range="[&quot;H&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_42" Range="[&quot;H&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;H&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_27" SheetName="Sheet1" Text="[cml.ToString]" />
+                    <If Condition="[lease and tp1]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_22">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_43" Range="[&quot;G&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_44" Range="[&quot;G&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;G&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_28" SheetName="Sheet1" Text="[lease.ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelApplicationScope>
+          </Sequence>
+        </FlowStep>
+        <FlowStep x:Key="New Build Purchase" x:Name="__ReferenceID3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">440,567</av:Point>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="newBuildPurchaseException" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="689,4487" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="E:\Taylors\Taylor Bot\Document exceptions.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="655,4378" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelWriteCell Cell="[&quot;A&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="Sheet1" Text="[in_case_ref]" />
+                    <ui:ExcelWriteCell Cell="[&quot;B&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="Sheet1" Text="[matter_type]" />
+                    <If Condition="[tp1 and lease]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_7">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_13" Range="[&quot;D&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_14" Range="[&quot;D&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;D&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Sheet1" Text="[tp1.ToString]" />
+                    <If Condition="[contract]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_8">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_15" Range="[&quot;E&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_16" Range="[&quot;E&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;E&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_12" SheetName="Sheet1" Text="[contract.ToString]" />
+                    <If Condition="[instruction_form]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_9">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_17" Range="[&quot;F&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_18" Range="[&quot;F&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;F&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="Sheet1" Text="[instruction_form.ToString]" />
+                    <If Condition="[certified_id]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_10">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_19" Range="[&quot;K&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_20" Range="[&quot;K&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;K&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="Sheet1" Text="[certified_id.ToString]" />
+                    <If Condition="[office_copy]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_11">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_21" Range="[&quot;I&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_22" Range="[&quot;I&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;I&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="Sheet1" Text="[office_copy.ToString]" />
+                    <If Condition="[statement]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_12">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_23" Range="[&quot;J&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_24" Range="[&quot;J&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;J&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="Sheet1" Text="[statement.ToString]" />
+                    <If Condition="[cml]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_13">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_25" Range="[&quot;H&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_26" Range="[&quot;H&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;H&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="Sheet1" Text="[cml.ToString]" />
+                    <If Condition="[lease and tp1]" sap:VirtualizedContainerService.HintSize="613,342" sap2010:WorkflowViewState.IdRef="If_14">
+                      <If.Then>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Red]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_27" Range="[&quot;G&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Then>
+                      <If.Else>
+                        <ui:ExcelSetRangeColor Color="[System.Drawing.Color.Green]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="284,185" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_28" Range="[&quot;G&quot;+in_row_counter.ToString]" SheetName="Sheet1" />
+                      </If.Else>
+                    </If>
+                    <ui:ExcelWriteCell Cell="[&quot;G&quot;+in_row_counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="Sheet1" Text="[lease.ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelApplicationScope>
+          </Sequence>
+        </FlowStep>
+      </FlowSwitch>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <FlowStep x:Name="__ReferenceID5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">640,144.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">740,195.5 740,226.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+          <ui:MultipleAssign.AssignOperations>
+            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[tr1]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_tr1_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[contract]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_contract_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[instruction_form]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_instruction_form_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[certified_id]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_certified_id_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[office_copy]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_official_copy_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[statement]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_statement_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:String">[case_reference]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:String">[in_case_ref]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:String">[matter_type]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:String">[in_workflow]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[tp1]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_tp1_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[lease]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_lease_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[cml]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:Boolean">[in_cml_missing]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+            </scg:List>
+          </ui:MultipleAssign.AssignOperations>
+        </ui:MultipleAssign>
+        <FlowStep.Next>
+          <x:Reference>__ReferenceID4</x:Reference>
+        </FlowStep.Next>
+      </FlowStep>
+    </Flowchart>
+  </Sequence>
+</Activity>

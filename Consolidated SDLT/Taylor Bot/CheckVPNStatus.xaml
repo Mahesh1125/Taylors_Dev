@@ -1,0 +1,606 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="VPNStatusCheck" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_vpn_status" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1136,2820</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>VPNStatusCheck_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="31">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CheckVPNStatus" sap:VirtualizedContainerService.HintSize="552,2755" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,324" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'SysListView32'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="d" KeyModifiers="Win">
+            <ui:SendHotkey.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f7a6a40-6ca9-4296-8d69-6fcbfe2f718e" InformativeScreenshot="a0eeb0b41efbbde3e908531c016bab32" Selector="&lt;wnd app='explorer.exe' cls='WorkerW' idx='*' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:SendHotkey.Target>
+          </ui:SendHotkey>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'SysListView32'" sap:VirtualizedContainerService.HintSize="510,154" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="r" KeyModifiers="Win" SpecialKey="False">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47e30d2-b18e-45fd-95d5-3dfef164f976" InformativeScreenshot="d69dc2c7e345fd82c23b4152ca074d02" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='Start' title='Start' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Button'" sap:VirtualizedContainerService.HintSize="510,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="cmd">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cb86202d-3c08-4350-9e2c-9f74a33f8c35" InformativeScreenshot="5bb7ee17cf3431420e675bebe29cf9ae" Selector="&lt;wnd app='explorer.exe' cls='#32770' title='Run' /&gt;&lt;wnd ctrlid='12298' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'dialog  Run'" sap:VirtualizedContainerService.HintSize="510,154" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="enter" KeyModifiers="None" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e2c3c2e2-ae29-492e-98d3-9d85b26e5cc5" InformativeScreenshot="ca9f038cb648b44be8f0589503be80f8" Selector="&lt;wnd app='explorer.exe' cls='#32770' title='Run' /&gt;&lt;ctrl name='Run' role='dialog' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'cmd.exe  Command Prompt'" sap:VirtualizedContainerService.HintSize="510,1606" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="1d9f940356109a1b3a7aa81bc9463537" Selector="&lt;wnd app='cmd.exe' cls='ConsoleWindowClass' title='C:\Windows\system32\cmd.exe' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1460" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'cmd.exe  Command Prompt'" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="Alt" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="79ec42fe-f792-4d24-8525-8dda9b86fe4d" InformativeScreenshot="0f813550d5ae31ab4d7c4d9dff6cf563">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'cmd.exe  Command Prompt'" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="ipconfig/all">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bced66dc-f809-492e-81c2-bf6b85d22497" InformativeScreenshot="d050daf5aab69443e14561d39edf3e19">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'cmd.exe  Command Prompt'" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="74c25abc-1747-4305-bdd5-dbd4a8bb999a" InformativeScreenshot="d050daf5aab69443e14561d39edf3e19">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ApiKey="dZ2v2Ha5ZR3VoobbIjzTzhlltIBBjHFGaEigElY8xHblmToJpwsGZuTd0exI9bwlOO9F4zTGmq1G5/1rZt0pUA==" DesignTimeCacheId="370ce7c1-91d6-411a-aed7-6262e4b9514b" DisplayName="CV Screen Scope 'cmd.exe  Command Prompt'" sap:VirtualizedContainerService.HintSize="434,660" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com" Version="V2">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,384" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="taylor_vpn_exist" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:CvElementExistsWithDescriptor Descriptor="[&quot;Target: Text 'Taylors' (310,593,58,15)&quot; +&#xA;&quot;Anchor: Text 'Connection-specific DNS Suffix' (21,576,244,16)&quot; +&#xA;&quot;Anchor: Text 'PPP adapter Taylors:' (0,544,159,17)&quot; +&#xA;&quot;Anchor: Text 'NetBIOS over Tcpip.' (22,513,151,16)&quot; +&#xA;&quot;Anchor: Text 'Physical Address.' (22,608,136,16)&quot; +&#xA;&quot;Anchor: Text 'Description .' (22,593,122,14)&quot;]" DesignTimeCacheId="370ce7c1-91d6-411a-aed7-6262e4b9514b" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="47793295db92fb7beb5daf1b6dd976c1" Result="[out_vpn_status]" TimeoutMS="500" Version="V2">
+                      <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor DesignTimeArea="21, 576, 244, 16" ElementType="Text" Text="Connection-specific DNS Suffix" />
+                              <uc:CvElementDescriptor DesignTimeArea="0, 544, 159, 17" ElementType="Text" Text="PPP adapter Taylors:" />
+                              <uc:CvElementDescriptor DesignTimeArea="22, 513, 151, 16" ElementType="Text" Text="NetBIOS over Tcpip." />
+                              <uc:CvElementDescriptor DesignTimeArea="22, 608, 136, 16" ElementType="Text" Text="Physical Address." />
+                              <uc:CvElementDescriptor DesignTimeArea="22, 593, 122, 14" ElementType="Text" Text="Description ." />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor DesignTimeArea="310, 593, 58, 15" ElementType="Text" Text="Taylors" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                    </p:CvElementExistsWithDescriptor>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="400,116" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="Alt" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="87bd0b0d-dc24-466b-af61-5d79889b0d7c">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DisplayName="Main Screen" Id="370ce7c1-91d6-411a-aed7-6262e4b9514b" InformativeScreenshot="5dcd070743178e818de51ead59067590" LogicalPosition="0, 0" OcrText="Microsoft Windows [Version 10.0.18363.1316] ^ (c) 2019 Microsoft Corporation. All rights reserved. C:\Users\uipath&gt;ipconfig/all Windows IP Configuration Host Name : Anza-03 Primary Dns Suffix : anzaservices.local Node Type : Hybrid IP Routing Enabled. : No WINS Proxy Enabled. : No DNS Suffix Search List. : anzaservices.local Ethernet adapter Ethernet: Connection-specific DNS Suffix : Description : Realtek PCIe GBE Family Controller Physical Address. : 40-8D-5C-6F-96-62 DHCP Enabled. : Yes Autoconfiguration Enabled : Yes Link-local IPv6 Address : fe80::e488:bec3:d94a:947d%11(Preferred) IPv4 Address. : 192.168.1.103(Preferred) Subnet Mask : 255.255.255.0 Lease Obtained. : 21 June 2021 11:01:50 Lease Expires : 22 June 2021 11:01:25 Default Gateway : 192.168.1.1 DHCP Server : 192.168.1.1 DHCPv6 IAID : 37784924 DHCPv6 Client DUID. : 0-01-00-01-27-68-D9-F8-40-8D-5C-6F-96-62 DNS Servers : 192.168.1.6 192.168.1.5 NetBIOS over Tcpip. : Enabled PPP adapter Taylors: Connection-specific DNS Suffix . : Description . : Taylors Physical Address. : DHCP Enabled. . : No Autoconfiguration Enabled : Yes IPv4 Address. : 192.168.3.39(Preferred) Subnet Mask : 255.255.255.255 Default Gateway : DNS Servers : 192.168.3.1 NetBIOS over Tcpip. : Enabled C:\Users\uipath&gt;_" Position="0, 0" ScreenshotGuid="f6ef1676-dd2a-4ae1-8f05-4797e661ad9d" ServerVersion="1">
+                        <uc:CVCache.CvTables>
+                          <x:Array Type="uc:CvTableInfo">
+                            <uc:CvTableInfo>
+                              <uc:CvTableInfo.Columns>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>15</x:Int32>
+                                  <x:Int32>314</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Columns>
+                              <uc:CvTableInfo.Rows>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>286</x:Int32>
+                                  <x:Int32>302</x:Int32>
+                                  <x:Int32>319</x:Int32>
+                                  <x:Int32>334</x:Int32>
+                                  <x:Int32>350</x:Int32>
+                                  <x:Int32>366</x:Int32>
+                                  <x:Int32>383</x:Int32>
+                                  <x:Int32>398</x:Int32>
+                                  <x:Int32>414</x:Int32>
+                                  <x:Int32>431</x:Int32>
+                                  <x:Int32>447</x:Int32>
+                                  <x:Int32>462</x:Int32>
+                                  <x:Int32>479</x:Int32>
+                                  <x:Int32>493</x:Int32>
+                                  <x:Int32>511</x:Int32>
+                                  <x:Int32>526</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Rows>
+                            </uc:CvTableInfo>
+                            <uc:CvTableInfo>
+                              <uc:CvTableInfo.Columns>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>0</x:Int32>
+                                  <x:Int32>20</x:Int32>
+                                  <x:Int32>316</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Columns>
+                              <uc:CvTableInfo.Rows>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>670</x:Int32>
+                                  <x:Int32>687</x:Int32>
+                                  <x:Int32>703</x:Int32>
+                                  <x:Int32>719</x:Int32>
+                                  <x:Int32>736</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Rows>
+                            </uc:CvTableInfo>
+                          </x:Array>
+                        </uc:CVCache.CvTables>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                            <uc:CvElementInfo Category="ArrowButton" Region="1902, 0, 17, 18" />
+                            <uc:CvElementInfo Category="Cell" Region="15, 414, 299, 17" />
+                            <uc:CvElementInfo Category="Cell" Region="15, 383, 299, 15" />
+                            <uc:CvElementInfo Category="Cell" Region="15, 398, 299, 16" />
+                            <uc:CvElementInfo Category="Cell" Region="15, 431, 299, 16" />
+                            <uc:CvElementInfo Category="Cell" Region="15, 447, 299, 15" />
+                            <uc:CvElementInfo Category="Cell" Region="18, 127, 287, 17" />
+                            <uc:CvElementInfo Category="Cell" Region="15, 366, 299, 17" />
+                            <uc:CvElementInfo Category="Cell" Region="15, 319, 299, 15" />
+                            <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="1902, 0, 17, 18" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 462, 299, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 479, 299, 14" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="18, 574, 304, 18" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 350, 299, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 302, 299, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 719, 296, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 334, 299, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 351, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="21, 253, 292, 19" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 670, 296, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="24, 158, 283, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 493, 299, 18" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 286, 299, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 655, 20, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 687, 296, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 415, 20, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 703, 296, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="26, 606, 307, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="22, 190, 288, 18" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 511, 299, 15" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 703, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="312, 431, 612, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 639, 19, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 432, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 447, 20, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 463, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="335, 462, 626, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="16, 540, 288, 32" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="32, 622, 283, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 719, 20, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="13, 513, 297, 30" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="11, 115, 296, 14" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 687, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="322, 398, 579, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 145, 298, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="14, 637, 323, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 175, 299, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="18, 274, 296, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="23, 594, 289, 15" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 367, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="316, 480, 651, 15" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="319, 383, 506, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 591, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="303, 350, 572, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 479, 19, 19" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 656, 302, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 624, 19, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 670, 20, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="375, 271, 38, 14" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="306, 382, 25, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 399, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 335, 20, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 303, 19, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 383, 19, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="308, 270, 497, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="311, 126, 71, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 319, 19, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="17, 722, 322, 27" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="309, 462, 79, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 220, 305, 30" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 240, 321, 29" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="321, 495, 563, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="309, 416, 507, 15" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="264, 419, 952, 44" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="310, 270, 75, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="326, 128, 431, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="713, 54, 1166, 498" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="311, 111, 65, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="310, 590, 69, 17" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="799, 91, 1081, 925" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="320, 447, 577, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="303, 192, 589, 18" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="21, 78, 318, 35" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 597, 300, 21" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="318, 367, 541, 16" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="280, 298, 1331, 258" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="308, 366, 30, 15" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="256">
+                            <uc:OcrTextInfo Region="1, 1, 71, 14" Text="Microsoft" />
+                            <uc:OcrTextInfo Region="78, 1, 58, 13" Text="Windows" />
+                            <uc:OcrTextInfo Region="143, 1, 66, 16" Text="[Version" />
+                            <uc:OcrTextInfo Region="214, 1, 128, 15" Text="10.0.18363.1316]" />
+                            <uc:OcrTextInfo Region="1904, 1, 12, 13" Text="^" />
+                            <uc:OcrTextInfo Region="0, 16, 24, 18" Text="(c)" />
+                            <uc:OcrTextInfo Region="30, 17, 34, 13" Text="2019" />
+                            <uc:OcrTextInfo Region="70, 16, 74, 14" Text="Microsoft" />
+                            <uc:OcrTextInfo Region="150, 16, 97, 17" Text="Corporation." />
+                            <uc:OcrTextInfo Region="253, 16, 27, 14" Text="All" />
+                            <uc:OcrTextInfo Region="286, 16, 50, 17" Text="rights" />
+                            <uc:OcrTextInfo Region="342, 16, 73, 14" Text="reserved." />
+                            <uc:OcrTextInfo Region="1, 48, 223, 17" Text="C:\Users\uipath&gt;ipconfig/all" />
+                            <uc:OcrTextInfo Region="0, 80, 56, 14" Text="Windows" />
+                            <uc:OcrTextInfo Region="62, 81, 19, 13" Text="IP" />
+                            <uc:OcrTextInfo Region="85, 80, 107, 16" Text="Configuration" />
+                            <uc:OcrTextInfo Region="22, 113, 34, 13" Text="Host" />
+                            <uc:OcrTextInfo Region="62, 113, 34, 13" Text="Name" />
+                            <uc:OcrTextInfo Region="295, 114, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="310, 113, 58, 12" Text="Anza-03" />
+                            <uc:OcrTextInfo Region="22, 128, 59, 17" Text="Primary" />
+                            <uc:OcrTextInfo Region="86, 130, 26, 12" Text="Dns" />
+                            <uc:OcrTextInfo Region="118, 129, 51, 13" Text="Suffix" />
+                            <uc:OcrTextInfo Region="296, 131, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="312, 129, 143, 14" Text="anzaservices.local" />
+                            <uc:OcrTextInfo Region="21, 145, 36, 13" Text="Node" />
+                            <uc:OcrTextInfo Region="62, 146, 35, 14" Text="Type" />
+                            <uc:OcrTextInfo Region="296, 147, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="309, 145, 52, 15" Text="Hybrid" />
+                            <uc:OcrTextInfo Region="22, 161, 19, 13" Text="IP" />
+                            <uc:OcrTextInfo Region="46, 160, 59, 17" Text="Routing" />
+                            <uc:OcrTextInfo Region="110, 161, 64, 13" Text="Enabled." />
+                            <uc:OcrTextInfo Region="296, 163, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="310, 161, 18, 13" Text="No" />
+                            <uc:OcrTextInfo Region="21, 177, 35, 13" Text="WINS" />
+                            <uc:OcrTextInfo Region="62, 177, 42, 15" Text="Proxy" />
+                            <uc:OcrTextInfo Region="110, 176, 64, 14" Text="Enabled." />
+                            <uc:OcrTextInfo Region="296, 179, 7, 11" Text=":" />
+                            <uc:OcrTextInfo Region="309, 177, 20, 13" Text="No" />
+                            <uc:OcrTextInfo Region="21, 193, 27, 13" Text="DNS" />
+                            <uc:OcrTextInfo Region="54, 192, 50, 14" Text="Suffix" />
+                            <uc:OcrTextInfo Region="110, 193, 50, 13" Text="Search" />
+                            <uc:OcrTextInfo Region="166, 192, 40, 14" Text="List." />
+                            <uc:OcrTextInfo Region="296, 194, 6, 12" Text=":" />
+                            <uc:OcrTextInfo Region="306, 192, 151, 14" Text="anzaservices.local" />
+                            <uc:OcrTextInfo Region="0, 225, 64, 13" Text="Ethernet" />
+                            <uc:OcrTextInfo Region="70, 225, 58, 16" Text="adapter" />
+                            <uc:OcrTextInfo Region="134, 225, 72, 13" Text="Ethernet:" />
+                            <uc:OcrTextInfo Region="21, 255, 155, 17" Text="Connection-specific" />
+                            <uc:OcrTextInfo Region="182, 257, 26, 13" Text="DNS" />
+                            <uc:OcrTextInfo Region="214, 257, 51, 13" Text="Suffix" />
+                            <uc:OcrTextInfo Region="295, 258, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="22, 273, 91, 15" Text="Description" />
+                            <uc:OcrTextInfo Region="295, 275, 8, 12" Text=":" />
+                            <uc:OcrTextInfo Region="310, 273, 58, 13" Text="Realtek" />
+                            <uc:OcrTextInfo Region="374, 273, 34, 13" Text="PCIe" />
+                            <uc:OcrTextInfo Region="414, 274, 26, 12" Text="GBE" />
+                            <uc:OcrTextInfo Region="446, 272, 51, 17" Text="Family" />
+                            <uc:OcrTextInfo Region="502, 272, 82, 14" Text="Controller" />
+                            <uc:OcrTextInfo Region="22, 288, 66, 16" Text="Physical" />
+                            <uc:OcrTextInfo Region="94, 289, 64, 13" Text="Address." />
+                            <uc:OcrTextInfo Region="296, 291, 7, 11" Text=":" />
+                            <uc:OcrTextInfo Region="309, 289, 141, 13" Text="40-8D-5C-6F-96-62" />
+                            <uc:OcrTextInfo Region="22, 305, 35, 13" Text="DHCP" />
+                            <uc:OcrTextInfo Region="63, 304, 65, 15" Text="Enabled." />
+                            <uc:OcrTextInfo Region="296, 307, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="309, 305, 27, 13" Text="Yes" />
+                            <uc:OcrTextInfo Region="21, 320, 139, 16" Text="Autoconfiguration" />
+                            <uc:OcrTextInfo Region="166, 321, 58, 13" Text="Enabled" />
+                            <uc:OcrTextInfo Region="296, 323, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="310, 321, 26, 13" Text="Yes" />
+                            <uc:OcrTextInfo Region="23, 336, 83, 15" Text="Link-local" />
+                            <uc:OcrTextInfo Region="110, 337, 34, 13" Text="IPv6" />
+                            <uc:OcrTextInfo Region="149, 337, 60, 13" Text="Address" />
+                            <uc:OcrTextInfo Region="296, 339, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="312, 336, 311, 16" Text="fe80::e488:bec3:d94a:947d%11(Preferred)" />
+                            <uc:OcrTextInfo Region="22, 353, 34, 13" Text="IPv4" />
+                            <uc:OcrTextInfo Region="61, 353, 65, 13" Text="Address." />
+                            <uc:OcrTextInfo Region="296, 354, 7, 13" Text=":" />
+                            <uc:OcrTextInfo Region="308, 352, 196, 16" Text="192.168.1.103(Preferred)" />
+                            <uc:OcrTextInfo Region="21, 369, 51, 13" Text="Subnet" />
+                            <uc:OcrTextInfo Region="78, 369, 35, 13" Text="Mask" />
+                            <uc:OcrTextInfo Region="295, 370, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="311, 369, 107, 13" Text="255.255.255.0" />
+                            <uc:OcrTextInfo Region="23, 385, 42, 13" Text="Lease" />
+                            <uc:OcrTextInfo Region="71, 384, 71, 14" Text="Obtained." />
+                            <uc:OcrTextInfo Region="295, 386, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="309, 385, 20, 13" Text="21" />
+                            <uc:OcrTextInfo Region="334, 385, 35, 13" Text="June" />
+                            <uc:OcrTextInfo Region="374, 385, 34, 13" Text="2021" />
+                            <uc:OcrTextInfo Region="415, 385, 67, 13" Text="11:01:50" />
+                            <uc:OcrTextInfo Region="23, 401, 42, 13" Text="Lease" />
+                            <uc:OcrTextInfo Region="71, 400, 57, 16" Text="Expires" />
+                            <uc:OcrTextInfo Region="295, 402, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="310, 400, 19, 14" Text="22" />
+                            <uc:OcrTextInfo Region="333, 401, 36, 13" Text="June" />
+                            <uc:OcrTextInfo Region="374, 401, 34, 13" Text="2021" />
+                            <uc:OcrTextInfo Region="414, 401, 66, 13" Text="11:01:25" />
+                            <uc:OcrTextInfo Region="22, 417, 58, 13" Text="Default" />
+                            <uc:OcrTextInfo Region="86, 417, 59, 16" Text="Gateway" />
+                            <uc:OcrTextInfo Region="295, 418, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="311, 416, 90, 14" Text="192.168.1.1" />
+                            <uc:OcrTextInfo Region="22, 433, 35, 13" Text="DHCP" />
+                            <uc:OcrTextInfo Region="62, 433, 51, 13" Text="Server" />
+                            <uc:OcrTextInfo Region="295, 434, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="310, 433, 92, 13" Text="192.168.1.1" />
+                            <uc:OcrTextInfo Region="22, 449, 51, 13" Text="DHCPv6" />
+                            <uc:OcrTextInfo Region="78, 449, 34, 13" Text="IAID" />
+                            <uc:OcrTextInfo Region="295, 451, 8, 12" Text=":" />
+                            <uc:OcrTextInfo Region="311, 449, 66, 13" Text="37784924" />
+                            <uc:OcrTextInfo Region="23, 465, 49, 13" Text="DHCPv6" />
+                            <uc:OcrTextInfo Region="78, 464, 50, 14" Text="Client" />
+                            <uc:OcrTextInfo Region="134, 465, 40, 13" Text="DUID." />
+                            <uc:OcrTextInfo Region="295, 467, 8, 12" Text=":" />
+                            <uc:OcrTextInfo Region="316, 465, 326, 14" Text="0-01-00-01-27-68-D9-F8-40-8D-5C-6F-96-62" />
+                            <uc:OcrTextInfo Region="22, 481, 26, 13" Text="DNS" />
+                            <uc:OcrTextInfo Region="54, 481, 58, 13" Text="Servers" />
+                            <uc:OcrTextInfo Region="295, 483, 8, 12" Text=":" />
+                            <uc:OcrTextInfo Region="310, 481, 90, 14" Text="192.168.1.6" />
+                            <uc:OcrTextInfo Region="311, 497, 90, 14" Text="192.168.1.5" />
+                            <uc:OcrTextInfo Region="22, 513, 57, 13" Text="NetBIOS" />
+                            <uc:OcrTextInfo Region="86, 515, 35, 11" Text="over" />
+                            <uc:OcrTextInfo Region="126, 513, 47, 16" Text="Tcpip." />
+                            <uc:OcrTextInfo Region="295, 514, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="310, 513, 59, 13" Text="Enabled" />
+                            <uc:OcrTextInfo Region="0, 544, 25, 14" Text="PPP" />
+                            <uc:OcrTextInfo Region="31, 545, 57, 15" Text="adapter" />
+                            <uc:OcrTextInfo Region="94, 544, 65, 17" Text="Taylors:" />
+                            <uc:OcrTextInfo Region="21, 576, 155, 16" Text="Connection-specific" />
+                            <uc:OcrTextInfo Region="183, 578, 25, 12" Text="DNS" />
+                            <uc:OcrTextInfo Region="214, 577, 51, 13" Text="Suffix" />
+                            <uc:OcrTextInfo Region="279, 578, 8, 13" Text="." />
+                            <uc:OcrTextInfo Region="295, 578, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="22, 593, 91, 14" Text="Description" />
+                            <uc:OcrTextInfo Region="117, 595, 27, 11" Text="." />
+                            <uc:OcrTextInfo Region="296, 595, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="310, 593, 58, 15" Text="Taylors" />
+                            <uc:OcrTextInfo Region="22, 608, 66, 16" Text="Physical" />
+                            <uc:OcrTextInfo Region="94, 609, 64, 14" Text="Address." />
+                            <uc:OcrTextInfo Region="295, 611, 8, 12" Text=":" />
+                            <uc:OcrTextInfo Region="22, 625, 34, 13" Text="DHCP" />
+                            <uc:OcrTextInfo Region="62, 624, 64, 14" Text="Enabled." />
+                            <uc:OcrTextInfo Region="168, 631, 6, 8" Text="." />
+                            <uc:OcrTextInfo Region="296, 627, 7, 11" Text=":" />
+                            <uc:OcrTextInfo Region="310, 626, 18, 12" Text="No" />
+                            <uc:OcrTextInfo Region="22, 640, 138, 16" Text="Autoconfiguration" />
+                            <uc:OcrTextInfo Region="167, 641, 57, 13" Text="Enabled" />
+                            <uc:OcrTextInfo Region="296, 643, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="310, 641, 26, 13" Text="Yes" />
+                            <uc:OcrTextInfo Region="22, 657, 34, 13" Text="IPv4" />
+                            <uc:OcrTextInfo Region="62, 657, 64, 13" Text="Address." />
+                            <uc:OcrTextInfo Region="296, 659, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="308, 657, 189, 15" Text="192.168.3.39(Preferred)" />
+                            <uc:OcrTextInfo Region="21, 673, 51, 13" Text="Subnet" />
+                            <uc:OcrTextInfo Region="77, 673, 36, 13" Text="Mask" />
+                            <uc:OcrTextInfo Region="296, 674, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="309, 672, 124, 14" Text="255.255.255.255" />
+                            <uc:OcrTextInfo Region="22, 689, 58, 13" Text="Default" />
+                            <uc:OcrTextInfo Region="86, 689, 59, 16" Text="Gateway" />
+                            <uc:OcrTextInfo Region="295, 690, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="22, 705, 26, 13" Text="DNS" />
+                            <uc:OcrTextInfo Region="53, 705, 60, 13" Text="Servers" />
+                            <uc:OcrTextInfo Region="296, 707, 7, 12" Text=":" />
+                            <uc:OcrTextInfo Region="311, 705, 89, 13" Text="192.168.3.1" />
+                            <uc:OcrTextInfo Region="22, 721, 58, 13" Text="NetBIOS" />
+                            <uc:OcrTextInfo Region="86, 723, 35, 11" Text="over" />
+                            <uc:OcrTextInfo Region="125, 720, 49, 17" Text="Tcpip." />
+                            <uc:OcrTextInfo Region="295, 722, 8, 13" Text=":" />
+                            <uc:OcrTextInfo Region="311, 721, 58, 13" Text="Enabled" />
+                            <uc:OcrTextInfo Region="3, 752, 135, 16" Text="C:\Users\uipath&gt;_" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" ApiKey="AAT8SYwLEqebq8jBGfgZSKRJ26iCrx6YsyuGlqLQ1qPR95ajtvaVrgtuthVNc9/sP+YGUJfdev00HkpKKVBugw==" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="92ed67a2-de17-417c-ae74-d4c2abaab35a" InformativeScreenshot="c45c962a47d581c60a150c7cbb87b853" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <ui:CloseApplication DisplayName="Close Application 'cmd.exe  C:\WINDOWS\sys...'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+              <ui:CloseApplication.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a6182212-b301-44d7-b097-c426d0abac79" InformativeScreenshot="56965c7f95329030bad9e4545a7ffcc3">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:CloseApplication.Target>
+            </ui:CloseApplication>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;VPN connection status is  &quot;+out_vpn_status.ToString]" />
+  </Sequence>
+</Activity>

@@ -1,0 +1,553 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Emailing BACS.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Exception_counter&Sequence_47",
+        "Ready_exist&Sequence_47",
+        "Exception_counter&Sequence_48",
+        "Ready_exist&Sequence_48",
+        "desktopPath&Sequence_43",
+        "MasterExcelPath&Sequence_43",
+        "MonthLastDate&Sequence_55",
+        "TodayDate&Sequence_55",
+        "strDT&Sequence_43",
+        "tempdt&Sequence_43",
+        "dt&Sequence_43",
+        "SDLT&Sequence_12",
+        "xlcounter&Sequence_12",
+        "finaldt&Sequence_26",
+        "CaseNumber&Sequence_25",
+        "Status&Sequence_25",
+        "Get_text1&Sequence_10",
+        "outword&Sequence_1",
+        "Get_utrn&Sequence_1",
+        "Word_exist&Sequence_1",
+        "document_exist&Sequence_24",
+        "IsEmailError&Sequence_23",
+        "In_Email&Sequence_23",
+        "Get_text&Sequence_31"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_CaseNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "extracted_datatable&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "connectRDP.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "popup_exist&Sequence_1",
+        "Pws&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Identify fee earner.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Fee_EarnerName&Sequence_1",
+        "Config_Email&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_Emailid"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Email identifier.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config_Table&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_ConfigEmail",
+        "In_MappingFile"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Import PDF.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AdobePDF&Sequence_3",
+        "PDF_Popup&Sequence_4",
+        "SDLT_Submitted&Sequence_4",
+        "InternetExp&Sequence_4",
+        "FolderNo&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "New Bot Comparison.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "In_PurchasePrice",
+        "In_Address",
+        "In_ClientName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GET_UTRN.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Get_utrn",
+        "xlcounter"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FilterAndGetDetailsAndDocuments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "doc_dt&Sequence_1",
+        "caseType&Sequence_1",
+        "In_CaseType&Sequence_1",
+        "execution_dt&Sequence_1",
+        "document_download_path&Sequence_167",
+        "certified_id_missing&Sequence_167",
+        "contract_missing&Sequence_167",
+        "instruction_form_missing&Sequence_167",
+        "TP1_missing&Sequence_167",
+        "lease_missing&Sequence_167",
+        "cml_missing&Sequence_167",
+        "office_copy_missing&Sequence_167",
+        "statement_missing&Sequence_167",
+        "PrimaryPurchaser&Sequence_167",
+        "PrimaryPurchaserNIN&Sequence_167",
+        "client_name&Sequence_168",
+        "client_NIN_number&Sequence_168",
+        "client_DOB&Sequence_168",
+        "sols_name&Sequence_168",
+        "sols_address&Sequence_168",
+        "sols_ref&Sequence_168",
+        "client_address&Sequence_168",
+        "exchange_date&Sequence_168",
+        "completion_date&Sequence_168",
+        "purchase_price&Sequence_168",
+        "property_address&Sequence_168",
+        "case_note_present&Sequence_168",
+        "client_ind_or_comp&Sequence_168",
+        "PrimaryPurchaser&Sequence_169",
+        "PrimaryPurchaserNIN&Sequence_169",
+        "document_download_path&Sequence_170",
+        "certified_id_missing&Sequence_170",
+        "cml_missing&Sequence_170",
+        "TP1_exception&Sequence_170",
+        "lease_missing&Sequence_170",
+        "office_copy_missing&Sequence_170",
+        "statement_missing&Sequence_170",
+        "contract_missing&Sequence_170",
+        "instruction_form_missing&Sequence_170",
+        "client_name&Sequence_171",
+        "client_NIN_number&Sequence_171",
+        "client_DOB&Sequence_171",
+        "sols_name&Sequence_171",
+        "sols_address&Sequence_171",
+        "sols_ref&Sequence_171",
+        "client_address&Sequence_171",
+        "exchange_date&Sequence_171",
+        "completion_date&Sequence_171",
+        "purchase_price&Sequence_171",
+        "property_address&Sequence_171",
+        "case_note_present&Sequence_171",
+        "client_ind_or_comp&Sequence_171",
+        "certified_id_missing&Sequence_172",
+        "document_download_path&Sequence_172",
+        "PrimaryPurchaser&Sequence_172",
+        "PrimaryPurchaserNIN&Sequence_172",
+        "contract_missing&Sequence_173",
+        "tr1_missing&Sequence_173",
+        "official_copy_missing&Sequence_173",
+        "statement_missing&Sequence_173",
+        "instruction_form_missing&Sequence_173",
+        "client_name&Sequence_174",
+        "client_NIN_number&Sequence_174",
+        "client_DOB&Sequence_174",
+        "sols_name&Sequence_174",
+        "sols_address&Sequence_174",
+        "sols_ref&Sequence_174",
+        "client_address&Sequence_174",
+        "exchange_date&Sequence_174",
+        "completion_date&Sequence_174",
+        "purchase_price&Sequence_174",
+        "property_address&Sequence_174",
+        "case_note_present&Sequence_174",
+        "client_ind_or_comp&Sequence_174",
+        "reportdt&Sequence_1",
+        "Requireddt&Sequence_1",
+        "deleteRow&Sequence_1",
+        "Processingdt&Sequence_1",
+        "excelpath&Sequence_1",
+        "Document_details_dt&Sequence_1",
+        "sdlt&Sequence_1",
+        "exceptional_row_counter&Sequence_1",
+        "case_number&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_excel_path",
+        "In_ToEmail",
+        "In_CCEmail",
+        "out_dt"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../Excel Comparision/comparison/Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MappingDT&Flowchart_1",
+        "ExtractedDT&Flowchart_1",
+        "ProcessingDT&Flowchart_1",
+        "FinalDT&Flowchart_1",
+        "ExtractedDTString&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "MappingFile",
+        "ExtractedFile",
+        "ProcessingFile",
+        "FinalFile",
+        "In_ToEmail",
+        "In_CCEmail",
+        "DocoumentExcptionFile"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../validating_and_submitting_sdlt_taylor_Bot/Read Extracted Data.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CompYear&Sequence_1",
+        "RowCounter&Sequence_1",
+        "IsPreviousProperty&Sequence_1",
+        "IsMainResidense&Sequence_1",
+        "IsSharedOwnership&Sequence_1",
+        "InFileName&Sequence_1",
+        "ExistingPDF&Sequence_1",
+        "individual_or_company&Sequence_1",
+        "purchase_price&Sequence_1",
+        "lease_premium&Sequence_1",
+        "owning_property&Sequence_1",
+        "annual_rent&Sequence_1",
+        "calculate_sdlt&Sequence_1",
+        "PDFPath&Sequence_4",
+        "finaldt&Sequence_2",
+        "MainResidense&Sequence_89",
+        "Doc_StampDuty&Sequence_89",
+        "SellerName&Sequence_89",
+        "Transferor&Sequence_89",
+        "MatterType&Sequence_89",
+        "finaldt&Sequence_89",
+        "PDFPath&Sequence_89",
+        "comp_date&Sequence_89",
+        "non_uk_resident&Sequence_89",
+        "lease_date&Sequence_89",
+        "previous_owned_or_part_owned_property&Sequence_89",
+        "lease_start_date&Sequence_89",
+        "sdlt_price&Sequence_89",
+        "CompDateMonth&Sequence_89",
+        "CompDate&Sequence_89",
+        "leasehold_or_freehold&Sequence_89",
+        "residential_or_nonresidential&Sequence_89",
+        "completion_date&Sequence_89",
+        "sdlt_question&Sequence_89",
+        "lease_end_date&Sequence_97",
+        "LeaseMonth&Sequence_97",
+        "LeaseStartDate&Sequence_97",
+        "LeaseStartYear&Sequence_97",
+        "LeaseEndMonth&Sequence_97",
+        "LeaseEndDate&Sequence_97",
+        "LeaseEndYear&Sequence_97",
+        "count&Sequence_114",
+        "NPV&Sequence_118"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_ClientType",
+        "Out_PurchasePrice",
+        "Out_IsUKResident",
+        "Out_TransactionType",
+        "Out_CompletionDate",
+        "Out_IsStayinProperty",
+        "Out_StartLeaseDate",
+        "Out_EndLeaseDate",
+        "Out_AnualRent",
+        "Out_PropertyType",
+        "Out_IsMultipleProperty",
+        "MultipleProperty",
+        "in_replacing_main_residence",
+        "In_previous_owned_or_part_owned_property",
+        "IO_CaseNumber",
+        "In_PDFPath",
+        "Out_FileName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "openRPM.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsReady&Sequence_5",
+        "casenote_rpm&Sequence_1",
+        "normal_rpm&Sequence_1",
+        "case_note_exist&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getTaskReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1",
+        "Report_exist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../Taylors/Excel Comparision/comparison/Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ProcessingTempDT&Sequence_4",
+        "MappingDT&Flowchart_1",
+        "ExtractedDT&Flowchart_1",
+        "ProcessingDT&Flowchart_1",
+        "FinalDT&Flowchart_1",
+        "ExtractedDTString&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "MappingFile",
+        "ExtractedFile",
+        "ProcessingFile",
+        "FinalFile",
+        "In_ToEmail",
+        "In_CCEmail",
+        "DocoumentExcptionFile"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getClientDetailsRPM.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsMorethan1Client&Sequence_1",
+        "Is1Client&Sequence_1",
+        "PersonalSelector&Sequence_1",
+        "popup_exist&Sequence_2",
+        "building_name&Sequence_2",
+        "building_number&Sequence_2",
+        "address_1&Sequence_2",
+        "address_2&Sequence_2",
+        "city&Sequence_2",
+        "country&Sequence_2",
+        "postcode&Sequence_2",
+        "correct_form&Sequence_2",
+        "Id&Sequence_2",
+        "PrimaryPurchaser&Sequence_2",
+        "test&Sequence_2",
+        "files&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_client_name",
+        "out_client_NIN",
+        "out_client_address",
+        "out_DOB",
+        "out_client_individual_company",
+        "Out_PrimaryPurchaser",
+        "Out_PrimaryNINNumber",
+        "In_BuildingNumber",
+        "In_BuildingName",
+        "In_Address1",
+        "In_Address2",
+        "In_ClientCity",
+        "In_ClientPostcode",
+        "In_ClientCountry",
+        "In_ClientDOB"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getPropertyDetails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "popup_exist&Sequence_3",
+        "doesnot_match&Sequence_3",
+        "ready&Sequence_3",
+        "building_name&Sequence_2",
+        "building_number&Sequence_2",
+        "address_1&Sequence_2",
+        "address_2&Sequence_2",
+        "city&Sequence_2",
+        "country&Sequence_2",
+        "postcode&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_exchange_date",
+        "out_completion_date",
+        "out_purchase_price",
+        "out_property_address"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getSolicitorDetails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dx_exchange&Sequence_1",
+        "solicitor_name&Sequence_1",
+        "ready&Sequence_1",
+        "DX&Sequence_4",
+        "second_solicitor_exist&Sequence_4",
+        "other_parties&Sequence_4",
+        "popup_exist&Sequence_4",
+        "doesnot_have_permision&Sequence_7",
+        "doesnot_match&Sequence_7",
+        "building_name&Sequence_7",
+        "building_number&Sequence_7",
+        "address_1&Sequence_7",
+        "address_2&Sequence_7",
+        "solicitor_name_2&Sequence_11",
+        "out_solicitor_Address_2&Sequence_11",
+        "out_solicitor_Reference_2&Sequence_11",
+        "doesnot_have_permision&Sequence_10",
+        "doesnot_match&Sequence_10",
+        "building_name&Sequence_10",
+        "building_number&Sequence_10",
+        "address_1&Sequence_10",
+        "address_2&Sequence_10"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_solicitor_name",
+        "out_solicitor_Address",
+        "out_solicitor_Reference"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DocumentFolder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_case_ref",
+        "out_download_path"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Update Share drive.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsExist&Sequence_2",
+        "IsUploaded&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "navigateDocument.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "document_window_exist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "searchCaseRef.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ready&Sequence_2",
+        "Update_task&Sequence_2",
+        "If_selectcase&Sequence_2",
+        "ImportantNotepopup&Sequence_13",
+        "important_note_image&Sequence_3",
+        "NewCaseNoRef&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_case_ref",
+        "out_caseNote_Exist",
+        "Get_text"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../Taylors/Taylor Bot/Emailing BACS.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SDLT&Sequence_12",
+        "xlcounter&Sequence_12",
+        "finaldt&Sequence_26",
+        "CaseNumber&Sequence_25",
+        "Status&Sequence_25",
+        "Get_text1&Sequence_10",
+        "outword&Sequence_1",
+        "Get_utrn&Sequence_1",
+        "Word_exist&Sequence_1",
+        "document_exist&Sequence_24",
+        "IsEmailError&Sequence_23",
+        "In_Email&Sequence_23",
+        "Exception_counter&Sequence_47",
+        "Ready_exist&Sequence_47",
+        "Get_text&Sequence_31",
+        "Exception_counter&Sequence_48",
+        "Ready_exist&Sequence_48",
+        "tempdt&Sequence_43",
+        "dt&Sequence_43",
+        "strDT&Sequence_43",
+        "desktopPath&Sequence_43",
+        "MasterExcelPath&Sequence_43",
+        "MonthLastDate&Sequence_55",
+        "TodayDate&Sequence_55"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_CaseNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
